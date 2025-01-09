@@ -110,7 +110,11 @@ body {
 
 .line {
   @apply overflow-hidden;
+  @media (min-width: 768px) {
+    line-height: 4.9rem;
+  }
 }
 .word{
-  @apply translate-y-full
+  @apply translate-y-full 
 }
+

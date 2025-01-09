@@ -1,49 +1,68 @@
 "use client";
 import { motion, stagger, useAnimate } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import ButtonComp from "../ui/ButtonComp";
 function HeroContent() {
+	const titleRef = useRef<HTMLHeadingElement>(null); // Regular ref for SplitType
+	const highlightRef = useRef<HTMLSpanElement>(null);
+	//eslint-disable-next-line
 	const [titleScope, titleAnimate] = useAnimate();
+	//eslint-disable-next-line
+	const [highlightScope, highlightAnimate] = useAnimate();
+
 	useEffect(() => {
-		new SplitType(titleScope.current, {
-			types: "lines,words",
-			tagName: "span",
-		});
-		const elementsToAnimate = [
-			...titleScope.current.querySelectorAll(".word"),
-			...titleScope.current.querySelectorAll(".highlight"),
-		  ];
-		  titleAnimate(
-			elementsToAnimate,
-			{
-			  transform: "translateY(0)",
-			  opacity: 1,
-			},
-			{
-			  duration: 0.5,
-			  delay: stagger(0.2),
-			}
-		  );
-	}, [
-		titleScope,
-		titleAnimate,
-	]);
+		if (titleRef.current) {
+			// Split text in the heading
+			new SplitType(titleRef.current, {
+				types: "lines,words",
+				tagName: "span",
+			});
+
+			// Select the split words and animate them
+			const titleToAnimate = [...titleRef.current.querySelectorAll(".word")];
+			titleAnimate(
+				titleToAnimate,
+				{ transform: "translateY(0)", opacity: 1 },
+				{ duration: 0.5, delay: stagger(0.2) }
+			);
+		}
+	}, [titleAnimate]);
+
+	useEffect(() => {
+		if (highlightRef.current) {
+			new SplitType(highlightRef.current, {
+				types: "lines,words",
+				tagName: "span",
+			});
+
+			const highlightToAnimate = [
+				...highlightRef.current.querySelectorAll(".word"),
+			];
+			highlightAnimate(
+				highlightToAnimate,
+				{ transform: "translateY(0)", opacity: 1 },
+				{ duration: 0.5, delay: stagger(0.2) }
+			);
+		}
+	}, [highlightAnimate]);
 	return (
 		<div className="content ">
 			<div className="tex flex flex-col items-start">
 				<motion.h1
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
-					ref={titleScope}
-					className="text-7xl capitalize font-abadiBold font-bold">
+					ref={titleRef}
+					className="text-6xl md:text-7xl capitalize font-abadiBold font-bold">
 					I&apos;m a full-stack developer
 					<br />
-					<span
-		
-					className="dark:text-appYellow text-appBlue highlight">
-						that rearly gets paid.
-					</span>
+					<motion.span
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						ref={highlightRef}
+						className="dark:text-appYellow text-appBlue">
+						that rarely gets paid.
+					</motion.span>
 				</motion.h1>
 				<motion.p
 					initial={{ opacity: 0, y: "-60%" }}

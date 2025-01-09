@@ -96,14 +96,14 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 export const Header = () => {
 	return (
 		<div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-			<motion.h1
+			<motion.h2
 				initial={{ y: 20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.4, ease: "easeIn" }}
-				viewport={{ once: true, amount: 0.9 }}
+				viewport={{ once: true }}
 				className="text-5xl md:text-7xl capitalize font-abadiBold font-bold dark:text-appYellow text-appBlue">
 				Projects <br />
-			</motion.h1>
+			</motion.h2>
 			<motion.p
 				initial={{ filter: "blur(10px)", opacity: 0 }}
 				whileInView={{ filter: "blur(0px)", opacity: 1 }}

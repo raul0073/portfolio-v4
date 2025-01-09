@@ -6,8 +6,7 @@ export const EXPERIENCE_DATA = [
 				<p className="dark:text-stone-200 text-zinc-900 text-lg md:text-xl  mb-8">
 					Selfemployed Web Developer, Israel. <br />
 					<span className="dark:text-stone-200/60 text-zinc-900/60 text-base">
-						Tackling diverse projects. Key projects
-						include:
+						I started coding after COVID, notable projects:
 					</span>
 				</p>
 				<ul className=" pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">
@@ -38,7 +37,7 @@ export const EXPERIENCE_DATA = [
 					Zambia. <br />
 					<span className="dark:text-stone-200/60 text-zinc-900/60 text-base">
 						Managed operations at a busy border crossing between Zambia and the
-						DRC, including:
+						DRC;
 					</span>
 				</p>
 				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">
@@ -99,7 +98,7 @@ export const EXPERIENCE_DATA = [
 					<span className="text-appBlue dark:text-appYellow">@ Virgo</span>,
 					South Africa. <br />
 					<span className="dark:text-stone-200/60 text-zinc-900/60 text-base">
-						Managed logistics for a beauty products company, including:
+						Managed logistics for a products company, I did the following:
 					</span>
 				</p>
 				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">
