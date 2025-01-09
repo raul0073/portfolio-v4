@@ -3,7 +3,7 @@ import React from 'react'
 
 function Projects() {
   return (
-    <section className="projects-parallax py-24">
+    <section className="projects-parallax py-24" id='projects'>
     <HeroParallaxDemo />
   </section>
   

@@ -6,7 +6,7 @@ import { AboutMyWork } from "./AboutMyWork";
 import StackTab from "./StackTab";
 import { Tabs } from "../ui/tabs";
 
-export function TabsDemo() {
+export function AboutTabs() {
 	const tabs = [
 		{
 			title: "About Me",

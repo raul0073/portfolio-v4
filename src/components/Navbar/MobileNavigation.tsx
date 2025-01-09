@@ -1,11 +1,13 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { MouseEvent } from "react";
 
 export const menuOptions = [
 	{ label: "Home", href: "#navbar" },
 	{ label: "About", href: "#about" },
 	{ label: "Projects", href: "#projects" },
 	{ label: "Experience", href: "#experience" },
+	{ label: "Contact", href: "#contact" },
 ];
 
 interface MobileNavigationProps {
@@ -20,6 +22,15 @@ const menuAnimation = {
 };
 
 function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
+	function handleNavigationMove(e: MouseEvent<HTMLAnchorElement>){
+		e.preventDefault();
+        setIsOpen(false);
+		const url = new URL(e.currentTarget.href);
+		const hash = url.hash;
+		const target= document.querySelector(hash)
+		if(!target) return;
+		target.scrollIntoView({ behavior: "smooth" });
+	}	
 	return (
 		<AnimatePresence>
 			{isOpen && (
@@ -38,9 +49,10 @@ function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
 									<li
 										key={item.href}
 										className="relative group/nav-item transition-all duration-300 ease-in-out axureFont border-t last:border-b py-8"
-										onClick={() => setIsOpen(false)}>
+										>
 										<a
 											href={item.href}
+											onClick={handleNavigationMove}
 											className=" group/nav-item flex h-full justify-between items-center  dark:text-white/40 text-zinc-900/60 text-4xl group-hover/nav-item:pl-4 group-hover/nav-item:dark:text-appYellow group-hover/nav-item:text-appBlue transition-all duration-500 ease-in-out isolate">
 											<div className="absolute bottom-0 left-0 h-0 w-full bg-stone-300 dark:bg-stone-800 group-hover/nav-item:h-full transition-all duration-500 -z-10"></div>
 											{item.label}

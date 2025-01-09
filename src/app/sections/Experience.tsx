@@ -3,7 +3,7 @@ import React from 'react'
 
 function Experience() {
   return (
-    <section className="experience py-24">
+    <section className="experience py-24" id='experience'>
         <ExperienceTimeline />
     
   </section>

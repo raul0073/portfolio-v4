@@ -9,7 +9,7 @@ function NavigationComp() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	return (
-		<header className="navbar-header fixed top-0 left-0 w-full z-50 h-fit border-b shadow-md shadow-appGray/10 border-appYellow/10  backdrop-blur-lg ">
+		<header className="navbar-header fixed top-0 left-0 w-full z-50 h-fit border-b shadow-md shadow-appGray/10 border-appYellow/10  backdrop-blur-lg " id="home">
 			<div className="flex justify-between items-center py-3 px-4 md:px-12 ">
 			
 					

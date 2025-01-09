@@ -1,10 +1,10 @@
-import { TabsDemo } from "@/components/AboutTabs/TabsComp";
+import { AboutTabs } from "@/components/AboutTabs/TabsComp";
 
 function About() {
 	return (
-		<section className="about py-24 ">
+		<section className="about py-24 " id="about">
 			<div className="container">
-				<TabsDemo />
+				<AboutTabs />
 			</div>
 		</section>
 	);
