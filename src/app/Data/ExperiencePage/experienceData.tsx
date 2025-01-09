@@ -6,21 +6,19 @@ export const EXPERIENCE_DATA = [
 				<p className="dark:text-stone-200 text-zinc-900 text-lg md:text-xl  mb-8">
 					Selfemployed Web Developer, Israel. <br />
 					<span className="dark:text-stone-200/60 text-zinc-900/60 text-base">
-						Passionate about coding and tackling diverse projects. Key projects
+						Tackling diverse projects. Key projects
 						include:
 					</span>
 				</p>
-				<ul className=" pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal mb-8 space-y-2">
+				<ul className=" pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">
 					<li>
-						<strong>🖥️ Lereava (לראווה):</strong> Developed a dynamic website
-						for a professional window cleaning service using React and Node.js,
-						enhancing their online presence and customer engagement.
+						<strong>🖥️ Lereava (לראווה):</strong> Developed a landing page
+						for a professional window cleaning service using React & Material-UI.
 					</li>
 					<li>
 						<strong>🖥️ Management System for a Local Synagogue:</strong> Created
-						a comprehensive management system utilizing Next.js and MongoDB,
-						streamlining administrative tasks and improving community
-						communication.
+						a management system utilizing Angular for client & Fastify server with MongoDB,
+						implemented user based roles and authentication.
 					</li>
 					<li>
 						<strong>🖥️ Talshir IBC:</strong> Built a robust web application for
@@ -43,7 +41,7 @@ export const EXPERIENCE_DATA = [
 						DRC, including:
 					</span>
 				</p>
-				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal mb-8 space-y-2">
+				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">
 					<li>
 						Oversaw a team of 263 employees, ensuring efficient and effective
 						operations.
@@ -75,7 +73,7 @@ export const EXPERIENCE_DATA = [
 						responsibilities included:
 					</span>
 				</p>
-				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal mb-8 space-y-2">
+				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">
 					<li>
 						Developed the company website using Wix, driving increased bookings
 						and customer inquiries.
@@ -104,7 +102,7 @@ export const EXPERIENCE_DATA = [
 						Managed logistics for a beauty products company, including:
 					</span>
 				</p>
-				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal mb-8 space-y-2">
+				<ul className="list-disc pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">
 					<li>
 						Coordinated logistics for apartments, vehicles, and POS systems,
 						ensuring seamless operations.

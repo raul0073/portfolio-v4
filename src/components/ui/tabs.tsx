@@ -40,7 +40,7 @@ export const Tabs = ({
 		<>
 			<div
 				className={cn(
-					" flex flex-col md:flex-row items-center justify-start [perspective:1000px] h-[180px] md:h-fit relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+					" flex flex-col md:flex-row items-center justify-start [perspective:1000px] h-[300px] md:h-fit relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
 					containerClassName
 				)}>
 				{propTabs.map((tab, idx) => (
@@ -69,10 +69,14 @@ export const Tabs = ({
 							/>
 						)}
 
-						<span className="transition-all duration-300 ease-in-out relative block text-black md:text-2xl font-abadiBold dark:text-white capitalize ">
-						
+						<span
+							className={cn(
+								"transition-all duration-300 ease-in-out relative block text-2xl font-bold font-abadiBold capitalize",
+								active.value === tab.value
+									? "text-zinc-900 dark:text-white/90"
+									: "text-gray-500 dark:text-white/40"
+							)}>
 							{tab.title}
-						
 						</span>
 					</button>
 				))}
@@ -82,7 +86,7 @@ export const Tabs = ({
 				active={active}
 				key={active.value}
 				hovering={hovering}
-				className={cn("mt-24", contentClassName)}
+				className={cn("mt-20", contentClassName)}
 			/>
 		</>
 	);

@@ -18,7 +18,7 @@ export function AboutTabs() {
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
-						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70">
+						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4">
 						I&apos;m Raz Massami
 					</motion.p>
 					<motion.div
@@ -40,7 +40,7 @@ export function AboutTabs() {
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
-						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70">
+						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4">
 						I create stuff with my computer
 					</motion.p>
 					<motion.div
@@ -62,7 +62,7 @@ export function AboutTabs() {
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
-						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70">
+						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4">
 						Fast websites, slower social life...
 					</motion.p>
 					<motion.div

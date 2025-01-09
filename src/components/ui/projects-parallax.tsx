@@ -101,7 +101,7 @@ export const Header = () => {
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.4, ease: "easeIn" }}
 				viewport={{ once: true, amount: 0.9 }}
-				className="text-7xl capitalize font-abadiBold font-bold dark:text-appYellow text-appBlue">
+				className="text-5xl md:text-7xl capitalize font-abadiBold font-bold dark:text-appYellow text-appBlue">
 				Projects <br />
 			</motion.h1>
 			<motion.p
@@ -110,7 +110,7 @@ export const Header = () => {
 				transition={{ duration: 0.6, ease: "easeIn" }}
 				viewport={{ once: true }}
 				className="max-w-2xl text-base md:text-2xl mt-6 dark:text-gray-400 text-slate-400 px-2">
-				Some of my recent work.
+				Some of my recent work && projects that fits this grid.
 			</motion.p>
 		</div>
 	);
@@ -134,7 +134,7 @@ export const ProjectCard = ({
 				y: -20,
 			}}
 			key={project.name}
-			className="group/project h-96 w-[30rem] relative flex-shrink-0">
+			className="group/project h-96 w-[30rem] relative flex-shrink-0 border-white/10 hover:border ">
 			<Link
 				href={project.url}
 				target="_blank"
@@ -152,7 +152,7 @@ export const ProjectCard = ({
 			<h2 className="absolute top-10 left-4 opacity-0 group-hover/project:opacity-100 text-white mb-4 font-abadiBold text-2xl capitalize">
 				{project.name} <br />
 			</h2>
-			<div className=" opacity-0 group-hover/project:opacity-100 left-1 px-2 absolute bottom-4 ">
+			<div className=" opacity-0 group-hover/project:opacity-100 left-1 px-3 absolute bottom-8 ">
 				<ul className="flex space-x-2 justify-end px-2 font-extrabold  text-xl ">
 					{project.tech.map((techName) => {
 						const icon = programingIcons.find(
@@ -165,7 +165,7 @@ export const ProjectCard = ({
 						) : null;
 					})}
 				</ul>
-				<p className="bg-gradient-to-r font-base from-slate-400 to-gray-500 bg-clip-text text-transparent">
+				<p className="bg-gradient-to-r font-base from-slate-200 to-slate-400 bg-clip-text text-transparent">
 					{project.description}
 				</p>
 			</div>

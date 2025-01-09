@@ -1,4 +1,5 @@
 export const programingIcons = [
+	// Frontend
 	{
 		name: "HTML",
 		class: "devicon-html5-plain",
@@ -36,12 +37,46 @@ export const programingIcons = [
 		class: "devicon-redux-original",
 	},
 	{
+		name: "NGRX",
+		class: "devicon-ngrx-plain",
+	},
+	{
 		name: "JOTAI",
 		class: "devicon-atom-original",
 	},
 	{
+		name: "MATERIAL-UI",
+		class: "devicon-materialui-plain",
+	},
+	{
+		name: "FRAMER MOTION",
+		class: "devicon-framermotion-original",
+	},
+
+	// Backend
+	{
 		name: "NODE",
 		class: "devicon-nodejs-plain",
+	},
+	{
+		name: "EXPRESS",
+		class: "devicon-express-original",
+	},
+	{
+		name: "FASTAPI",
+		class: "devicon-fastapi-plain",
+	},
+	{
+		name: "FLASK",
+		class: "devicon-flask-original",
+	},
+	{
+		name: "FASTIFY",
+		class: "devicon-fastify-plain",
+	},
+	{
+		name: ".NET",
+		class: "devicon-dotnetcore-plain",
 	},
 	{
 		name: "C#",
@@ -51,26 +86,8 @@ export const programingIcons = [
 		name: "PYTHON",
 		class: "devicon-python-plain",
 	},
-	{
-		name: "FLASK",
-		class: "devicon-flask-original",
-	},
-	{
-		name: "FASTAPI",
-		class: "devicon-fastapi-plain",
-	},
-	{
-		name: "FASTIFY",
-		class: "devicon-fastify-plain",
-	},
-	{
-		name: "EXPRESS",
-		class: "devicon-express-original"
-	},
-	{
-		name: ".NET",
-		class: "devicon-dotnetcore-plain"
-	},
+
+	// Databases
 	{
 		name: "MONGODB",
 		class: "devicon-mongodb-plain",
@@ -83,6 +100,8 @@ export const programingIcons = [
 		name: "SQL",
 		class: "devicon-azuresqldatabase-plain",
 	},
+
+	// Cloud & Tools
 	{
 		name: "AWS",
 		class: "devicon-amazonwebservices-plain-wordmark",
@@ -91,6 +110,8 @@ export const programingIcons = [
 		name: "GIT",
 		class: "devicon-git-plain",
 	},
+
+	// Design Tools
 	{
 		name: "PHOTOSHOP",
 		class: "devicon-photoshop-plain",
@@ -99,16 +120,4 @@ export const programingIcons = [
 		name: "FIGMA",
 		class: "devicon-figma-plain",
 	},
-	{
-		name: "FRAMER MOTION",
-		class: "devicon-framermotion-original"
-	},
-	{
-		name: "MATERIAL-UI",
-		class: "devicon-materialui-plain"
-	},
-	{
-		name: "NGRX",
-        class: "devicon-ngrx-plain"
-	}
 ];

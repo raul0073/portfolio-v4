@@ -1,10 +1,10 @@
 import { ExperienceTimeline } from '@/components/Experience/ExperienceComp'
-import React from 'react'
+import { EXPERIENCE_DATA } from '../Data/ExperiencePage/experienceData'
 
 function Experience() {
   return (
     <section className="experience py-24" id='experience'>
-        <ExperienceTimeline />
+         <ExperienceTimeline data={EXPERIENCE_DATA} />
     
   </section>
   )

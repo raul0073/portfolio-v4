@@ -35,7 +35,7 @@ function AboutMeTab() {
 				width={150}
 				height={150}
 				loading="lazy"
-				className="profile-avatar dark:bg-appGray bg-appGray/40 absolute top-5 right-5 hover:-translate-y-2 transition-transform duration-200 ease-in-out"
+				className="hidden lg:flex profile-avatar dark:bg-appGray bg-appGray/40 absolute top-5 right-5 hover:-translate-y-2 transition-transform duration-200 ease-in-out"
 			/>
 		
 		</div>

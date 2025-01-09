@@ -54,7 +54,7 @@ function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
 											href={item.href}
 											onClick={handleNavigationMove}
 											className=" group/nav-item flex h-full justify-between items-center  dark:text-white/40 text-zinc-900/60 text-4xl group-hover/nav-item:pl-4 group-hover/nav-item:dark:text-appYellow group-hover/nav-item:text-appBlue transition-all duration-500 ease-in-out isolate">
-											<div className="absolute bottom-0 left-0 h-0 w-full bg-stone-300 dark:bg-stone-800 group-hover/nav-item:h-full transition-all duration-500 -z-10"></div>
+											<div className="absolute bottom-0 left-0 h-0 w-full bg-gradient-to-b from-transparent via-white to-transparent dark:bg-stone-800 group-hover/nav-item:h-full transition-all duration-500 -z-10"></div>
 											{item.label}
 											<ArrowUpRight
 												className="inline-flex mx-2"

@@ -11,6 +11,6 @@ export type ProductType = {
 	tech: string[];
 	thumbnail: string;
 };
-export function HeroParallaxDemo() {
+export function ProjectsParallaxComp() {
 	return <ProjectsParallax products={projectData.projects} />;
 }
