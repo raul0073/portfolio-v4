@@ -1,0 +1,50 @@
+{
+    "experience": [
+        {
+            "title": "2020 - Present",
+            "cardTitle": "Freelance Web Developer, Israel",
+            "cardSubtitle": "Passionate about coding and tackling diverse projects. Key projects include:",
+            "cardDetailedText": [
+                "Lereava (לראווה) - Developed a dynamic website for a professional window cleaning service using React and Node.js, enhancing their online presence and customer engagement.",
+                "Management system for a local synagogue - Created a comprehensive management system utilizing Next.js and MongoDB, streamlining administrative tasks and improving community communication.",
+                "Talshir IBC - Built a robust web application for an international patent company using Laravel, optimizing their patent management processes."
+            ],
+            "url": "/projects"
+        },
+        {
+            "title": "2018 - 2020",
+            "cardTitle": "Operations Manager, Zambia",
+            "cardSubtitle": "Managed operations at a busy border crossing between Zambia and the DRC, including:",
+            "cardDetailedText": [
+                "Oversaw a team of 263 employees, ensuring efficient and effective operations.",
+                "Implemented smart traffic flow systems using data analysis, handling 1.5k vehicles per day and reducing congestion.",
+                "Maintained daily communication with shareholders, providing detailed reports and insights."
+            ]
+        },
+        {
+            "title": "2015 - 2018",
+            "cardTitle": "Owner, Mexico",
+            "cardSubtitle": "Founded and managed a tourism company in Bacalar, Quintana Roo. Responsibilities included:",
+            "cardDetailedText": [
+                "Developed the company website using Wix, driving increased bookings and customer inquiries.",
+                "Led advertising and marketing efforts, resulting in an increased customer engagement.",
+                "Handled social media management, growing the company's online presence and following."
+            ]
+        },
+        {
+            "title": "2012 - 2015",
+            "cardTitle": "Logistics Manager, South Africa",
+            "cardSubtitle": "Managed logistics for a beauty products company, including:",
+            "cardDetailedText": [
+                "Coordinated logistics for apartments, vehicles, and POS systems, ensuring seamless operations.",
+                "Administered POS systems, improving transaction accuracy and speed.",
+                "Oversaw company IT operations, maintaining high system uptime and security."
+            ]
+        },
+        {
+            "title": "2010 - 2012",
+            "cardTitle": "Security Project, Equatorial Guinea",
+            "cardSubtitle": "Provided guidance and training to locals in Spanish."
+        }
+    ]
+}
