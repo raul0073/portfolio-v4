@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { debounce } from "lodash";
+import { useEffect, useState } from "react";
 
 
 const useScrollAndScreen = () => {
@@ -22,14 +22,14 @@ const useScrollAndScreen = () => {
     // event listeners
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-
+ 
     
     // Clean up 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // avoid redundant setups
+  }, []); 
 
   return { hasScrolled, screenLg };
 };

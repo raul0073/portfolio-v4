@@ -40,7 +40,7 @@ export const Tabs = ({
 		<>
 			<div
 				className={cn(
-					" flex flex-col md:flex-row items-center justify-start [perspective:1000px] h-[300px] md:h-fit relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+					" flex flex-row items-center justify-start [perspective:1000px] md:h-[180px] h-fit sticky overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
 					containerClassName
 				)}>
 				{propTabs.map((tab, idx) => (
@@ -71,7 +71,7 @@ export const Tabs = ({
 
 						<span
 							className={cn(
-								"transition-all duration-300 ease-in-out relative block text-2xl font-bold font-abadiBold capitalize",
+								"transition-all duration-300 ease-in-out  block text-lg md:text-2xl sticky font-bold font-abadiBold capitalize",
 								active.value === tab.value
 									? "text-zinc-900 dark:text-white/90"
 									: "text-gray-500 dark:text-white/40"
