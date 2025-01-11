@@ -166,7 +166,7 @@ export const ProjectCard = ({
 					alt={project.name}
 				/>
 			</Link>
-			<div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 bg-black pointer-events-none px-2"></div>
+			<div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 dark:bg-black bg-black/90 pointer-events-none px-2"></div>
 			<h2 className="absolute top-10 left-4 opacity-0 group-hover/project:opacity-100 text-white mb-4 font-abadiBold text-2xl capitalize">
 				{project.name} <br />
 			</h2>
