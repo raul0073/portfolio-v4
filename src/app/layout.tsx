@@ -30,6 +30,10 @@ export default function RootLayout({
 					type="text/css"
 					href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
 				/>
+					<script
+					defer
+					src="https://cloud.umami.is/script.js"
+					data-website-id="202d637c-95fe-43d9-b27b-1751a1e91ced"></script>
 			</head>
 			<body
 				className={`${Abadi.variable} ${AbadiBold.variable} font-abadi antialiased bg-stone-200 dark:bg-zinc-900 text-stone-900 dark:text-stone-200`}>
