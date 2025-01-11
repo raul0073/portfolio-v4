@@ -76,8 +76,13 @@ export function AboutTabs() {
 	];
 
 	return (
-		<div className="min-h-[40rem] h-[40rem] [perspective:1000px] z-30 relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
+		<motion.div
+		initial={{opacity: 0, filter: "blur(10px)"}}
+		whileInView={{filter: "blur(0px)", opacity: 1}}
+		transition={{duration: .8, ease: "easeInOut"}}
+		viewport={{once: true, amount: .8}}
+		className="min-h-[40rem] h-[40rem] [perspective:1000px] z-30 relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
 			<Tabs tabs={tabs} />
-		</div>
+		</motion.div>
 	);
 }

@@ -1,35 +1,73 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { menuOptions } from "../Navbar/MobileNavigation";
 import ButtonComp from "../ui/ButtonComp";
+import { useEffect } from "react";
+import SplitType from "split-type";
 
 function FooterComp() {
+	const [scope, animate] = useAnimate();
+	const inView = useInView(scope, {
+		once: true,
+	})
+
+	useEffect(() => {
+        new SplitType(scope.current.querySelector("h2"), {
+			types: "lines,words",
+			tagName: "span"
+		})
+    }, [scope]);
+	useEffect(()=>{
+		if(inView){
+			animate(scope.current.querySelectorAll(".word"), {
+				transform: "translateY(0)",
+               
+			},
+			{
+				duration: 0.6,
+                delay: stagger(0.2),
+             
+			})
+		}
+	},[inView])
 	return (
 		<footer
+		
 			className="w-full bg-gradient-to-b from-transparent dark:to-zinc-900 to-stone-300"
 			id="contact">
 			<div className="container">
 				<div className="flex gap-4 items-center my-12">
 					<div className="size-3 rounded-full dark:bg-appYellow bg-appBlue"></div>
-					<span className="text-sm md:text-xl uppercase tracking-wider dark:text-stone-200/70 text-zinc-900/70">
+					<motion.span
+					initial={{opacity: 0, filter: "blur(10px)"}}
+					whileInView={{filter: "blur(0px)", opacity: 1}}
+					transition={{duration: .8, ease: "easeInOut"}}
+					viewport={{once: true}}
+
+					className="text-sm md:text-xl uppercase tracking-wider dark:text-stone-200/70 text-zinc-900/70">
 						my salary expectations will surprise you.
-					</span>
+					</motion.span>
 				</div>
 				<div className="grid grid-cols-1 lg:grid-cols-3">
-					<div className="col-span-2">
-						<motion.h2
-							initial={{ opacity: 0, y: 50 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
+					<div className="col-span-2" ref={scope}>
+						<h2
+							
 							className="text-5xl md:text-7xl capitalize mb-8">
 							after everything you&apos;ve seen, let&apos;s talks business
-						</motion.h2>
-						<ButtonComp
+						</h2>
+						<motion.div
+						initial={{opacity:0, y: "100%"}}
+						whileInView={{opacity: 1, y:0}}
+						transition={{duration: .8, ease: "easeInOut", delay: .8}}
+						viewport={{once: true}}
+						>
+							<ButtonComp
 							icon={<ArrowUpRight />}
 							title="razm.work@gmail.com"
 							className="lowercase border-dashed border-appBlue dark:border-appYellow2"
 						/>
+						</motion.div>
 					</div>
 					<nav className=" ">
 						<ul className="flex flex-col  gap-2 mt-16">

@@ -50,7 +50,7 @@ export const ExperienceTimeline = ({ data }: { data: TimelineEntry[] }) => {
 				whileInView={{ filter: "blur(0px)", opacity: 1 }}
 				transition={{ duration: 0.6, ease: "easeIn" }}
 				viewport={{ once: true }}
-				className="max-w-2xl text-base md:text-2xl mt-6 dark:text-gray-400 text-slate-400 px-2">
+				className="max-w-2xl text-base md:text-2xl mt-6 dark:text-gray-400 text-slate-600 px-2">
 				What I&apos;ve been up to until now
 			</motion.p>
 		</div>

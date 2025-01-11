@@ -6,7 +6,7 @@ export const EXPERIENCE_DATA = [
 				<p className="dark:text-stone-200 text-zinc-900 text-lg md:text-xl  mb-8">
 					Selfemployed Web Developer, Israel. <br />
 					<span className="dark:text-stone-200/60 text-zinc-900/60 text-base">
-						I started coding after COVID, notable projects:
+						I started coding after COVID and didn&apos;t stop, notable projects:
 					</span>
 				</p>
 				<ul className=" pl-5 text-neutral-800 dark:text-neutral-200/90 font-sans font-normal text-sm mb-8 space-y-2">

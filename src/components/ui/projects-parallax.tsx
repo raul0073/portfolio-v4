@@ -48,11 +48,20 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 		useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
 		springConfig
 	);
+	const headerTranslateY = useSpring(
+		useTransform(scrollYProgress, [0, 0.2], [0, 550]),
+		springConfig
+	);
+	const headerOpacity = useSpring(
+		useTransform(scrollYProgress, [0, 0.2], [1, 0.5]),
+		springConfig
+	);
+
 	return (
 		<div
 			ref={ref}
-			className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
-			<Header />
+			className="md:h-[300vh] h-[550vh]   py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+			<Header translateY={headerTranslateY} opacity={headerOpacity} />
 			<motion.div
 				style={{
 					rotateX,
@@ -61,7 +70,8 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 					opacity,
 				}}
 				className="">
-				<motion.div className="flex  justify-center space-x-10 mb-20">
+				<h2 className={`${scrollYProgress}`}></h2>
+				<motion.div className="flex md:flex-row flex-col gap-12  justify-center md:space-x-10 mb-20">
 					{firstRow.map((project) => (
 						<ProjectCard
 							project={project}
@@ -70,7 +80,7 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 						/>
 					))}
 				</motion.div>
-				<motion.div className="flex flex-row  justify-center mb-20 space-x-10 ">
+				<motion.div className="flex md:flex-row flex-col  justify-center mb-20 md:space-x-10 gap-12">
 					{secondRow.map((project) => (
 						<ProjectCard
 							project={project}
@@ -79,7 +89,7 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 						/>
 					))}
 				</motion.div>
-				<motion.div className="flex space-x-10 justify-center">
+				<motion.div className="flex md:flex-row flex-col gap-12 md:space-x-10 justify-center">
 					{thirdRow.map((project) => (
 						<ProjectCard
 							project={project}
@@ -93,9 +103,17 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 	);
 };
 
-export const Header = () => {
+export const Header = ({
+	translateY,
+	opacity,
+}: {
+	translateY: MotionValue<number>;
+	opacity: MotionValue<number>;
+}) => {
 	return (
-		<div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
+		<motion.div
+			style={{ translateY, opacity }}
+			className="max-w-7xl mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
 			<motion.h2
 				initial={{ y: 20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
@@ -109,10 +127,10 @@ export const Header = () => {
 				whileInView={{ filter: "blur(0px)", opacity: 1 }}
 				transition={{ duration: 0.6, ease: "easeIn" }}
 				viewport={{ once: true }}
-				className="max-w-2xl text-base md:text-2xl mt-6 dark:text-gray-400 text-slate-400 px-2">
+				className="max-w-2xl text-base md:text-2xl mt-6 dark:text-gray-400 text-slate-600 px-2">
 				Some of my recent work && projects that fits this grid.
 			</motion.p>
-		</div>
+		</motion.div>
 	);
 };
 
@@ -134,7 +152,7 @@ export const ProjectCard = ({
 				y: -20,
 			}}
 			key={project.name}
-			className="group/project h-96 w-[30rem] relative flex-shrink-0 border-white/10 hover:border ">
+			className="group/project h-96 md:w-[30rem] w-screen   relative flex-shrink-0 border-white/10 hover:border ">
 			<Link
 				href={project.url}
 				target="_blank"
