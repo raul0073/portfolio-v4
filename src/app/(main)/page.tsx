@@ -1,20 +1,32 @@
-import ParallexText from "@/components/ParallaxText";
-import { Fragment } from "react";
-import About from "../sections/About";
-import Experience from "../sections/Experience";
-import Hero from "../sections/Hero";
-import Projects from "../sections/Projects";
 import { TrackingAlertDialog } from "@/components/TrackingAlert/TrackingAlertDialog";
+import dynamic from "next/dynamic";
+import { Fragment } from "react";
+import Hero from "../sections/Hero";
 
+const DynamicAboutSection = dynamic(import("../sections/About"), {
+	loading: () => <div>Loading...</div>,
+});
+const DynamicParallaxSection = dynamic(
+	import("@/components/ParallaxImage/ParallaxText"),
+	{
+		loading: () => <div>Loading...</div>,
+	}
+);
+const DynamicProjectsSection = dynamic(import("../sections/Projects"), {
+	loading: () => <div>Loading...</div>,
+});
+const DynamicExperienceSection = dynamic(import("../sections/Experience"), {
+	loading: () => <div>Loading...</div>,
+});
 export default function Home() {
 	return (
 		<Fragment>
 			<TrackingAlertDialog />
 			<Hero />
-			<About />
-			<ParallexText />
-			<Projects />
-			<Experience />
+			<DynamicAboutSection />
+			<DynamicParallaxSection />
+			<DynamicProjectsSection />
+			<DynamicExperienceSection />
 		</Fragment>
 	);
 }

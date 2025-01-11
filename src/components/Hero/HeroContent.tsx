@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import ButtonComp from "../ui/ButtonComp";
 function HeroContent() {
-	const titleRef = useRef<HTMLHeadingElement>(null); // Regular ref for SplitType
+	const titleRef = useRef<HTMLHeadingElement>(null); 
 	const highlightRef = useRef<HTMLSpanElement>(null);
 	//eslint-disable-next-line
 	const [titleScope, titleAnimate] = useAnimate();
@@ -69,7 +69,7 @@ function HeroContent() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 1.8 }}
 					className="mt-4 text-2xl dark:text-white/60 text-zinc-900/60">
-					Fueled by caffeine, sarcasm and the occasional Wi-Fi outage, I build
+					Fueled by caffeine, sarcasm and the occasional Wi-Fi, I build
 					stuff.
 				</motion.p>
 			</div>

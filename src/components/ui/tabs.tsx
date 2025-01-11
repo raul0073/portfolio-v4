@@ -40,7 +40,7 @@ export const Tabs = ({
 		<>
 			<div
 				className={cn(
-					" flex flex-row items-center justify-start [perspective:1000px] md:h-[180px] h-fit sticky overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+					" flex flex-row items-center justify-start [perspective:1000px] py-4 sticky overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
 					containerClassName
 				)}>
 				{propTabs.map((tab, idx) => (
@@ -52,7 +52,7 @@ export const Tabs = ({
 						onMouseEnter={() => setHovering(true)}
 						onMouseLeave={() => setHovering(false)}
 						className={cn(
-							"group relative px-4 py-2 rounded-full",
+							"group relative md:px-4 md:py-2 px-2 py-2 rounded-full",
 							tabClassName
 						)}
 						style={{
@@ -71,7 +71,7 @@ export const Tabs = ({
 
 						<span
 							className={cn(
-								"transition-all duration-300 ease-in-out  block text-lg md:text-2xl sticky font-bold font-abadiBold capitalize",
+								"transition-all duration-300 ease-in-out  block text-sm md:text-2xl sticky font-bold font-abadiBold capitalize",
 								active.value === tab.value
 									? "text-zinc-900 dark:text-white/90"
 									: "text-gray-500 dark:text-white/40"

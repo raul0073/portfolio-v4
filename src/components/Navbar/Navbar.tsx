@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Signature from "../Signature";
+import Signature from "../rmSignature/Signature";
 import ButtonComp from "../ui/ButtonComp";
 import HamburgerMenuBtn from "./HamburgerMenuBtn";
 import MobileNavigation from "./MobileNavigation";

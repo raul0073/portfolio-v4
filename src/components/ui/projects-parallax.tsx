@@ -144,7 +144,7 @@ export const ProjectCard = ({
 					height={600}
 					width={600}
 					loading="lazy"
-					className="object-cover object-left-top absolute h-full w-full inset-0 rounded-md"
+					className="object-cover object-left-top absolute h-full w-full  inset-0 rounded-lg hover:rounded-none"
 					alt={project.name}
 				/>
 			</Link>

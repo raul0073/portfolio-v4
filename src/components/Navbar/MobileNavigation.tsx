@@ -16,21 +16,22 @@ interface MobileNavigationProps {
 }
 
 const menuAnimation = {
-	initial: { height: 0 },
-	animate: { height: "100vh" },
-	exit: { height: 0 },
+	initial: { height: 0, opacity: 0 },
+	animate: { height: "100vh", opacity: 1 },
+	exit: { height: 0, opacity: 0 },
 };
 
 function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
-	function handleNavigationMove(e: MouseEvent<HTMLAnchorElement>){
+	function handleNavigationMove(e: MouseEvent<HTMLAnchorElement>) {
 		e.preventDefault();
-        setIsOpen(false);
+		setIsOpen(false);
 		const url = new URL(e.currentTarget.href);
 		const hash = url.hash;
-		const target= document.querySelector(hash)
-		if(!target) return;
+		const target = document.querySelector(hash);
+		if (!target) return;
 		target.scrollIntoView({ behavior: "smooth" });
-	}	
+	}
+
 	return (
 		<AnimatePresence>
 			{isOpen && (
@@ -41,30 +42,29 @@ function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
 					animate="animate"
 					exit="exit"
 					transition={{ duration: 0.5, ease: "easeInOut" }}
-					className="w-full fixed top-16 left-0 bg-bg-light dark:bg-zinc-900 z-50 flex justify-start overflow-hidden">
+					className="w-full fixed top-16 left-0 bg-bg-light dark:bg-zinc-900 z-50 flex justify-start overflow-hidden"
+				>
 					<nav className="text-left uppercase w-full">
-						<ul className="pt-12  px-4 w-full">
-							{menuOptions.map((item) => {
-								return (
-									<li
-										key={item.href}
-										className="relative group/nav-item transition-all duration-300 ease-in-out axureFont border-t last:border-b dark:border-stone-200/10 border-zinc-800/10 py-8"
-										>
-										<a
-											href={item.href}
-											onClick={handleNavigationMove}
-											className=" group/nav-item flex h-full justify-between items-center  dark:text-white/40 text-zinc-900/60 text-4xl group-hover/nav-item:pl-4 group-hover/nav-item:dark:text-appYellow group-hover/nav-item:text-appBlue transition-all duration-500 ease-in-out isolate">
-											
-											{item.label}
-											<ArrowUpRight
-												className="inline-flex mx-2"
-												width={30}
-												height={30}
-											/>
-										</a>
-									</li>
-								);
-							})}
+						<ul className="pt-12 px-4 w-full">
+							{menuOptions.map((item) => (
+								<li
+									key={item.href}
+									className="relative group/nav-item transition-all duration-300 ease-in-out axureFont border-t last:border-b dark:border-stone-200/10 border-zinc-800/10 py-8"
+								>
+									<a
+										href={item.href}
+										onClick={handleNavigationMove}
+										className="group/nav-item flex h-full justify-between items-center dark:text-white/40 text-zinc-900/60 text-4xl group-hover/nav-item:pl-4 group-hover/nav-item:dark:text-appYellow group-hover/nav-item:text-appBlue transition-all duration-500 ease-in-out isolate"
+									>
+										{item.label}
+										<ArrowUpRight
+											className="inline-flex mx-2"
+											width={30}
+											height={30}
+										/>
+									</a>
+								</li>
+							))}
 						</ul>
 					</nav>
 				</motion.div>

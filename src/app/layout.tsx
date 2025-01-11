@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.scss";
-import "./custom.scss";
-import { ThemeProvider } from "../components/ThemeProvider";
 import localFont from "next/font/local";
+import { ThemeProvider } from "../components/Theme/ThemeProvider";
+import "./custom.scss";
+import "./globals.scss";
 
 const Abadi = localFont({
 	src: "./assets/fonts/abadi-mt-pro.ttf",
@@ -25,9 +25,11 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
-
-            <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-          
+				<link
+					rel="stylesheet"
+					type="text/css"
+					href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+				/>
 			</head>
 			<body
 				className={`${Abadi.variable} ${AbadiBold.variable} font-abadi antialiased bg-stone-200 dark:bg-zinc-900 text-stone-900 dark:text-stone-200`}>

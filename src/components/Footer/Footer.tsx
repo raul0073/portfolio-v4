@@ -23,7 +23,7 @@ function FooterComp() {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5 }}
 							className="text-5xl md:text-7xl capitalize mb-8">
-							Well, you got this far, now it&apos;s time to talk business.
+							after everything you&apos;ve seen, let&apos;s talks business
 						</motion.h2>
 						<ButtonComp
 							icon={<ArrowUpRight />}

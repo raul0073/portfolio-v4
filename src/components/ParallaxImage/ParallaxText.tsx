@@ -1,5 +1,4 @@
 "use client";
-import arrowRightBlue from "@/app/assets/icons/Hand-drawn-arrow-blue.png";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -45,8 +44,9 @@ export default function ParallaxText() {
 									<span className="  bg-clip-text text-transparent bg-gradient-to-r  from-appYellow to-appYellow2 text-4xl">
 										This is Noah
 										<Image
-											src={arrowRightBlue}
+											src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/Hand-drawn-arrow-blue.png"
 											alt="arrow_to_Noah"
+											loading="eager"
 											width={300}
 											height={300}
 											className="hidden md:inline absolute -top-[200%] -right-[100%] rotate-12  md:scale-100"

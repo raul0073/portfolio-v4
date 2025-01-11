@@ -18,6 +18,7 @@ function Hero() {
 					<div className="mt-20 md:mt-0 h-full">
 						<Image
 							src={img}
+							loading="eager"
 							alt="hero"
 							className="size-full object-cover"
 							width={500}

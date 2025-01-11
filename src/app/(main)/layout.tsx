@@ -1,6 +1,6 @@
 import FooterComp from '@/components/Footer/Footer'
 import NavigationComp from '@/components/Navbar/Navbar'
-import { ThemeSwitcher } from '@/components/ThemeSwitcher'
+import { ThemeSwitcher } from '@/components/Theme/ThemeSwitcher'
 import React, { Fragment, ReactNode } from 'react'
 
 function Layout({children} : { children: ReactNode}) {
