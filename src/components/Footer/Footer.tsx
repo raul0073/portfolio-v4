@@ -30,7 +30,7 @@ function FooterComp() {
              
 			})
 		}
-	},[inView])
+	},[inView, scope])
 	return (
 		<footer
 		

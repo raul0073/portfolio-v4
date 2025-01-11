@@ -71,7 +71,7 @@ export const Tabs = ({
 
 						<span
 							className={cn(
-								"transition-all duration-300 ease-in-out  block text-sm md:text-2xl sticky font-bold font-abadiBold capitalize",
+								"transition-all duration-300 ease-in-out  block text-sm font-normal md:text-2xl sticky md:font-bold md:font-abadiBold capitalize",
 								active.value === tab.value
 									? "text-zinc-900 dark:text-white/90"
 									: "text-gray-500 dark:text-white/40"

@@ -1,4 +1,4 @@
-"use client";
+
 import { ProjectsParallax } from "../ui/projects-parallax";
 import projectData from "./../../app/Data/ProjectsPage/projects.json";
 

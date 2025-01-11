@@ -16,18 +16,18 @@
       "thumbnail": "https://razportfolio.s3.eu-central-1.amazonaws.com/assets/projectsBox/lrvDe.png"
     },
     {
-      "name": "Live Scores WebApp",
-      "subTitle": "Live Results & Fixtures via Rapid API",
-      "description": "A Next.js & React project that serves live football match data worldwide. Users can set their favorite leagues and personalize theme colors.",
-      "url": "https://rmscores.netlify.app/",
-      "git": "https://github.com/raul0073/LiveScores",
+      "name": "Football Academy Landing Page",
+      "subTitle": "Showcasing Football Academy Services",
+      "description": "A dynamic landing page showcasing the football academy's services, built with Actercity-UI for a polished, professional look.",
+      "url": "https://eleven-academy.co.il",
+      "git": "#",
       "tech": [
         "Next",
         "React",
         "Sass",
         "TailWind"
       ],
-      "thumbnail": "https://razportfolio.s3.eu-central-1.amazonaws.com/v4/applications/scores_mobile_mock-removebg-preview.png"
+      "thumbnail": "https://razportfolio.s3.eu-central-1.amazonaws.com/v4/landing_pages/eleven_academy_.png"
     },
     {
       "name": "Synagogue Bookkeeping",
@@ -113,19 +113,20 @@
       "thumbnail": "https://razportfolio.s3.eu-central-1.amazonaws.com/v4/applications/Tahel_mobile_mock-removebg-preview.png"
     },
     {
-      "name": "Football Academy Landing Page",
-      "subTitle": "Showcasing Football Academy Services",
-      "description": "A dynamic landing page showcasing the football academy's services, built with Actercity-UI for a polished, professional look.",
-      "url": "https://eleven-academy.co.il",
-      "git": "#",
+      "name": "Live Scores WebApp",
+      "subTitle": "Live Results & Fixtures via Rapid API",
+      "description": "A Next.js & React project that serves live football match data worldwide. Users can set their favorite leagues and personalize theme colors.",
+      "url": "https://rmscores.netlify.app/",
+      "git": "https://github.com/raul0073/LiveScores",
       "tech": [
         "Next",
         "React",
         "Sass",
         "TailWind"
       ],
-      "thumbnail": "https://razportfolio.s3.eu-central-1.amazonaws.com/v4/landing_pages/eleven_academy_.png"
+      "thumbnail": "https://razportfolio.s3.eu-central-1.amazonaws.com/v4/applications/scores_mobile_mock-removebg-preview.png"
     },
+
     {
       "name": "Factory Management System",
       "subTitle": "Manage Factory Employees & Departments",

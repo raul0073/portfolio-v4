@@ -60,7 +60,7 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 	return (
 		<div
 			ref={ref}
-			className="md:h-[300vh] h-[550vh]   py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+			className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
 			<Header translateY={headerTranslateY} opacity={headerOpacity} />
 			<motion.div
 				style={{
@@ -71,7 +71,7 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 				}}
 				className="">
 				<h2 className={`${scrollYProgress}`}></h2>
-				<motion.div className="flex md:flex-row flex-col gap-12  justify-center md:space-x-10 mb-20">
+				<motion.div className="flex md:flex-row flex-col  justify-center space-x-10 mb-10">
 					{firstRow.map((project) => (
 						<ProjectCard
 							project={project}
@@ -80,7 +80,7 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 						/>
 					))}
 				</motion.div>
-				<motion.div className="flex md:flex-row flex-col  justify-center mb-20 md:space-x-10 gap-12">
+				<motion.div className="flex flex-row  justify-center mb-10 space-x-10 ">
 					{secondRow.map((project) => (
 						<ProjectCard
 							project={project}
@@ -89,7 +89,7 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 						/>
 					))}
 				</motion.div>
-				<motion.div className="flex md:flex-row flex-col gap-12 md:space-x-10 justify-center">
+				<motion.div className="flex space-x-10 justify-center">
 					{thirdRow.map((project) => (
 						<ProjectCard
 							project={project}
@@ -152,7 +152,7 @@ export const ProjectCard = ({
 				y: -20,
 			}}
 			key={project.name}
-			className="group/project h-96 md:w-[30rem] w-screen   relative flex-shrink-0 border-white/10 hover:border ">
+			className="group/project h-96 md:w-[30rem] w-screen   relative flex-shrink-0 rounded-xl">
 			<Link
 				href={project.url}
 				target="_blank"
@@ -162,12 +162,12 @@ export const ProjectCard = ({
 					height={600}
 					width={600}
 					loading="lazy"
-					className="object-cover object-left-top absolute h-full w-full  inset-0 rounded-lg hover:rounded-none"
+					className="object-cover object-left-top absolute h-full w-full  inset-0 rounded-xl p-1"
 					alt={project.name}
 				/>
 			</Link>
-			<div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 dark:bg-black bg-black/90 pointer-events-none px-2"></div>
-			<h2 className="absolute top-10 left-4 opacity-0 group-hover/project:opacity-100 text-white mb-4 font-abadiBold text-2xl capitalize">
+			<div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 dark:bg-black/90 bg-slate-800/90 rounded-xl pointer-events-none px-2"></div>
+			<h2 className="absolute top-10 left-4 opacity-0  group-hover/project:opacity-100  font-base bg-clip-text bg-gradient-to-br  from-white/80 to-white text-transparent mb-4 font-abadiBold text-2xl capitalize ">
 				{project.name} <br />
 			</h2>
 			<div className=" opacity-0 group-hover/project:opacity-100 left-1 px-3 absolute bottom-8 ">
