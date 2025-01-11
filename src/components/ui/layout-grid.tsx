@@ -24,7 +24,7 @@ export const LayoutGrid = ({ cards }: { cards: ProductType[] }) => {
   };
 
   return (
-    <div className="w-full h-full px-4  grid grid-cols-2 max-w-7xl mx-auto gap-4 relative cursor-pointer pb-24">
+    <div className="w-full h-full px-4  grid grid-cols-2 max-w-7xl mx-auto gap-4 relative cursor-pointer pb-24 dark:bg-bg-dark bg-gray-300">
       {cards.map((card, i) => (
         <div key={i} className={cn(`min-h-24`)}>
           <motion.div
@@ -35,8 +35,8 @@ export const LayoutGrid = ({ cards }: { cards: ProductType[] }) => {
               selected?.url === card.url
                 ? "cursor-pointer absolute inset-0 h-1/2 w-full m-auto z-50 flex justify-center items-center flex-wrap flex-col "
                 : lastSelected?.url === card.url
-                ? "z-40 bg-appBlue dark:bg-appYellow/60 h-full w-full col-span-2"
-                : "bg-transparent  h-full w-full"
+                ? "z-40 bg-appBlue/80 dark:bg-appYellow/80 h-full w-full col-span-2 rounded-t-xl"
+                : "bg-transparent  h-full w-full rounded-none"
             )}
             layoutId={`card-${card.url}`}
           >
@@ -74,7 +74,7 @@ const ImageComponent = ({ card }: { card: ProductType }) => {
 
 const SelectedCard = ({ selected }: { selected: ProductType | null }) => {
   return (
-    <div className="bg-black/80 h-full w-full flex flex-col justify-end rounded-lg shadow-2xl relative z-[60] cursor-default">
+    <div className="bg-black/90 h-full w-full flex flex-col justify-end  shadow-2xl relative z-[60] cursor-default">
       <motion.div
         initial={{
           opacity: 0,
@@ -88,8 +88,8 @@ const SelectedCard = ({ selected }: { selected: ProductType | null }) => {
 				{selected?.name} <br />
        
 			</h2>
-      <Link className="absolute right-2 bottom-1 items-center inline z-30 text-white/60"  href={selected?.url || "#"} target="_blank"><ArrowRight width={20} /></Link>
-        <Link className="absolute right-8 bottom-1 items-center inline z-30 text-white/60"  href={selected?.git || "#"} target="_blank"><i className="devicon-github-original w-4 h-auto"  /></Link>
+      <Link className="absolute right-4 top-4 items-center inline z-30 text-appBlue/60"  href={selected?.url || "#"} target="_blank"><ArrowRight width={20} /></Link>
+        <Link className="absolute right-10 top-4 items-center inline z-30 text-appBlue/60"  href={selected?.git || "#"} target="_blank"><i className="devicon-github-original w-4 h-auto"  /></Link>
       <motion.div
         layoutId={`content-${selected?.url}`}
         initial={{
@@ -123,7 +123,7 @@ const SelectedCard = ({ selected }: { selected: ProductType | null }) => {
 					})}
 				</ul>
         <p
-        className="relative"
+        className="relative text-white/80 text-sm font-normal"
         >
 
         {selected?.description}

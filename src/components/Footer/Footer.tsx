@@ -1,10 +1,10 @@
 "use client";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { menuOptions } from "../Navbar/MobileNavigation";
 import ButtonComp from "../ui/ButtonComp";
 import { useEffect } from "react";
 import SplitType from "split-type";
+import { menuOptions } from "@/app/Data/Navigation/data";
 
 function FooterComp() {
 	const [scope, animate] = useAnimate();

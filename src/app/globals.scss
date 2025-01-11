@@ -84,6 +84,8 @@ body {
 		@apply bg-gradient-to-br from-[#2a2a2c] to-transparent;
 	}
 }
+
+// projects no scroll
 .no-visible-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -94,10 +96,12 @@ body {
   display: none;
 }
 
-
+// about me avatar
 .profile-avatar {
  border-radius: 38% 62% 79% 21% / 33% 40% 60% 67%;
 }
+
+// parallax img and text
 .parallax-text {
 		background-image: url('https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/noah_cut.png');
 	  background-attachment: fixed;
@@ -108,6 +112,8 @@ body {
 }
 
 
+
+// typewriter effect
 .line {
   @apply overflow-hidden;
   @media (min-width: 768px) {

@@ -23,7 +23,7 @@ export default function ParallaxText() {
 			<div className="flex justify-start items-center px-4 h-full py-2">
 				<div className="text-4xl max-w-xl h-full items-start flex font-normal text-left bg-gradient-to-r font-base from-appYellow to-appYellow2 bg-clip-text text-transparent">
 					<AnimatePresence mode="wait">
-						{scrollY < 2050 ? (
+						{scrollY < 3350 ? (
 							<motion.span
 								key="text1"
 								initial={{ opacity: 0, y: "-60%" }}

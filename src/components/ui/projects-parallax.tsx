@@ -7,6 +7,7 @@ import {
 	useSpring,
 	useTransform,
 } from "framer-motion";
+import { Link2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -60,7 +61,7 @@ export const ProjectsParallax = ({ products }: { products: ProductType[] }) => {
 	return (
 		<div
 			ref={ref}
-			className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+			className="h-[250vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
 			<Header translateY={headerTranslateY} opacity={headerOpacity} />
 			<motion.div
 				style={{
@@ -143,6 +144,7 @@ export const ProjectCard = ({
 		url: string;
 		thumbnail: string;
 		tech: string[];
+		git: string;
 	};
 	translate: MotionValue<number>;
 }) => {
@@ -153,10 +155,7 @@ export const ProjectCard = ({
 			}}
 			key={project.name}
 			className="group/project h-96 md:w-[30rem] w-screen   relative flex-shrink-0 rounded-xl">
-			<Link
-				href={project.url}
-				target="_blank"
-				className="block group-hover/project:shadow-2xl ">
+			<div className="block group-hover/project:shadow-2xl ">
 				<Image
 					src={project.thumbnail}
 					height={600}
@@ -165,7 +164,7 @@ export const ProjectCard = ({
 					className="object-cover object-left-top absolute h-full w-full  inset-0 rounded-xl p-1"
 					alt={project.name}
 				/>
-			</Link>
+			</div>
 			<div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 dark:bg-black/90 bg-slate-800/90 rounded-xl pointer-events-none px-2"></div>
 			<h2 className="absolute top-10 left-4 opacity-0  group-hover/project:opacity-100  font-base bg-clip-text bg-gradient-to-br  from-white/80 to-white text-transparent mb-4 font-abadiBold text-2xl capitalize ">
 				{project.name} <br />
@@ -186,6 +185,14 @@ export const ProjectCard = ({
 				<p className="bg-gradient-to-r font-base from-slate-200 to-slate-400 bg-clip-text text-transparent">
 					{project.description}
 				</p>
+				<div className="w-full flex justify-end items-center gap-2 mt-2">
+					<Link href={project.url} target="_blank">
+						<Link2 className="text-appBlue -rotate-45" />
+					</Link>
+					<Link href={project.git} target="_blank">
+						<span className="devicon-github-original text-appBlue"></span>
+					</Link>
+				</div>
 			</div>
 		</motion.div>
 	);

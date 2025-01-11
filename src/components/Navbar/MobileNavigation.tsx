@@ -1,14 +1,6 @@
+import { menuOptions } from "@/app/Data/Navigation/data";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { MouseEvent } from "react";
-
-export const menuOptions = [
-	{ label: "Home", href: "#navbar" },
-	{ label: "About", href: "#about" },
-	{ label: "Projects", href: "#projects" },
-	{ label: "Experience", href: "#experience" },
-	{ label: "Contact", href: "#contact" },
-];
 
 interface MobileNavigationProps {
 	isOpen: boolean;
@@ -18,7 +10,7 @@ interface MobileNavigationProps {
 const menuAnimation = {
 	initial: { height: 0, opacity: 0 },
 	animate: { height: "100vh", opacity: 1 },
-	exit: { height: 0, opacity: 0 },
+	exit: { height: 0 },
 };
 
 function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
@@ -42,26 +34,19 @@ function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
 					animate="animate"
 					exit="exit"
 					transition={{ duration: 0.5, ease: "easeInOut" }}
-					className="w-full fixed top-16 left-0 bg-bg-light dark:bg-zinc-900 z-50 flex justify-start overflow-hidden"
-				>
+					className="w-full fixed top-16 left-0 bg-bg-light dark:bg-zinc-900 z-50 flex justify-start overflow-hidden">
 					<nav className="text-left uppercase w-full">
 						<ul className="pt-12 px-4 w-full">
-							{menuOptions.map((item) => (
+							{menuOptions.map(({ label, href, Icon }) => (
 								<li
-									key={item.href}
-									className="relative group/nav-item transition-all duration-300 ease-in-out axureFont border-t last:border-b dark:border-stone-200/10 border-zinc-800/10 py-8"
-								>
+									key={href}
+									className="relative group/nav-item transition-all duration-300 ease-in-out font-axure border-t last:border-b dark:border-stone-200/10 border-zinc-800/10 py-8">
 									<a
-										href={item.href}
+										href={href}
 										onClick={handleNavigationMove}
-										className="group/nav-item flex h-full justify-between items-center dark:text-white/40 text-zinc-900/60 text-4xl group-hover/nav-item:pl-4 group-hover/nav-item:dark:text-appYellow group-hover/nav-item:text-appBlue transition-all duration-500 ease-in-out isolate"
-									>
-										{item.label}
-										<ArrowUpRight
-											className="inline-flex mx-2"
-											width={30}
-											height={30}
-										/>
+										className="group/nav-item flex h-full justify-between items-center dark:text-white/40 text-zinc-900/60 text-4xl group-hover/nav-item:pl-4 group-hover/nav-item:dark:text-appYellow group-hover/nav-item:text-appBlue transition-all duration-500 ease-in-out isolate">
+										{label}
+										<Icon className="translate-x-8 w-4 h-4 group-hover/nav-item:-translate-x-0 group-hover/nav-item:dark:text-appYellow/60 group-hover/nav-item:text-appBlue/60 duration-200 transition-all ease-in-out" />
 									</a>
 								</li>
 							))}

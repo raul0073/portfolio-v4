@@ -62,14 +62,14 @@ export const ExperienceTimeline = ({ data }: { data: TimelineEntry[] }) => {
 								whileInView={{ opacity: 1, filter: "blur(0px)" }}
 								transition={{ duration: 0.8, ease: "easeIn" }}
 								viewport={{ once: true }}
-								className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500 axureFont">
+								className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500 font-axure">
 								{item.title}
 							</motion.h3>
 						</div>
 
 						<div className="relative pl-20 pr-4 md:pl-4 w-full ">
 							<h3
-								className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500 axureFont">
+								className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500 font-axure">
 								{item.title}
 							</h3>
 							<motion.div

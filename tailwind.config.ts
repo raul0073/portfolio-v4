@@ -76,6 +76,7 @@ export default {
 		fontFamily: {
 			abadi: 'var(--font-abadi)',
 			abadiBold: 'var(--font-abadi-bold)',
+			axure: 'var(--font-axure)',
 		}
   	}
   },

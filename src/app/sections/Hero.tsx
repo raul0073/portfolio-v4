@@ -16,7 +16,7 @@ function Hero() {
 
 	const imgWidth = useTransform(scrollYProgress, [0,1], ["100%", "240%"])
 	return (
-		<section className="hero w-full pb-24">
+		<section className="hero w-full pb-24"  id="home">
 			<div className="grid md:grid-cols-12 md:h-[93vh] pt-24 md:pt-0 items-strech sticky top-0">
 				<div className="md:col-span-7 flex flex-col justify-center">
 					<div className="container">
