@@ -9,11 +9,10 @@ export function AboutMyWork() {
 				className="">
 				<div className="max-w-xs">
 					<h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-						Building apps that make sence
+						Building apps that make sense
 					</h2>
-					<p className="mt-4 text-left  text-base/6 text-neutral-200">
-						With over 100,000 mothly active bot users, Gippity AI is the most
-						popular AI platform for developers.
+					<p className="mt-4 text-left  text-base/6 text-neutral-200 max-w-36 md:max-w-xs">
+						Creating things that people actually use, and as intuitive as finding the snooze button.
 					</p>
 				</div>
 				<Image
@@ -31,7 +30,7 @@ export function AboutMyWork() {
 						Custom reports
 					</h2>
 					<p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-						We provide your data with tailored reports so you don&apos;t have to
+						I provide your data with tailored reports so you don&apos;t have to
 					</p>
 				</div>
 				<Image
@@ -40,17 +39,18 @@ export function AboutMyWork() {
 					height={350}
 					loading="lazy"
 					alt="dashboard_report_eleven"
-					className="absolute md:-left-1/2 -left-12 md:-bottom-30 -bottom-32 object-contain rounded-2xl"
+					className="absolute md:-left-1/2 -left-40 md:-bottom-30 -bottom-40 object-contain rounded-2xl"
 				/>
 			</WobbleCard>
 			<WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
 				<div className="max-w-sm">
 					<h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-						Converting your data to visuals
+						Converting data into visuals
 					</h2>
 					<p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-					✅ Analytics they never use. <br />
-					✅ Scatter graph that will make you bang your head against the wall.
+					✔️ Analytics you will never use. <br />
+					✔️ Charts that will make you bang your head against the wall. <br />
+					✔️ A Dashboard you grow to hate.
 					</p>
 				</div>
 				<Image

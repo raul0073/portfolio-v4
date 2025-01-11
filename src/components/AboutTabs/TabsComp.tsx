@@ -4,6 +4,7 @@ import AboutMeTab from "./AboutMeTab";
 import { AboutMyWork } from "./AboutMyWork";
 import StackTab from "./StackTab";
 import { Tabs } from "../ui/tabs";
+import Image from "next/image";
 
 export function AboutTabs() {
 	const tabs = [
@@ -11,14 +12,23 @@ export function AboutTabs() {
 			title: "About Me",
 			value: "about me",
 			content: (
-				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold dark:text-white text-zinc-900 dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
-					<span className="absolute w-96 h-96 -right-12 -top-12 bg-gradient-to-t from-transparent to-appYellow/30 blur-3xl rounded-full opacity-20"></span>
+				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
+				
 					<motion.p
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
-						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4">
-						I&apos;m Raz Massami
+						className="mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4 tracking-wide">
+						<Image
+				src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png"
+				alt="profile_avatar"
+				width={80}
+				height={80}
+				loading="lazy"
+				className="inline-flex mr-4 profile-avatar dark:bg-appGray bg-appGray/40 hover:-translate-y-2 transition-transform duration-200 ease-in-out"
+			/>
+						
+						Raz Massami
 					</motion.p>
 					<motion.div
 						initial={{ opacity: 0, y: 50 }}
@@ -33,13 +43,13 @@ export function AboutTabs() {
 			title: "About My Work",
 			value: "About My Work",
 			content: (
-				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold dark:text-white text-zinc-900 dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
-					<span className="absolute w-96 h-96 -right-12 -top-12 bg-gradient-to-t from-transparent to-appYellow/30 blur-3xl rounded-full opacity-20"></span>
+				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
+					
 					<motion.p
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
-						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4">
+						className="mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4 tracking-wide">
 						I create stuff with my computer
 					</motion.p>
 					<motion.div
@@ -55,13 +65,13 @@ export function AboutTabs() {
 			title: "most used tools",
 			value: "most used tools",
 			content: (
-				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold dark:text-white text-zinc-900 dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
-					<span className="absolute w-96 h-96 -right-12 -top-12 bg-gradient-to-t from-transparent to-appYellow/30 blur-3xl rounded-full opacity-20"></span>
+				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
+				
 					<motion.p
 						initial={{ opacity: 0, y: -50 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ duration: 0.5, ease: "easeInOut" }}
-						className="z-30 mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4">
+						className="mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4 tracking-wide">
 						Fast websites, slower social life...
 					</motion.p>
 					<motion.div

@@ -1,7 +1,7 @@
 'use client'
 import { MobileProjectsGrid } from '@/components/Projects/MobileProjectsGrid';
 import { ProjectsParallaxComp } from '@/components/Projects/ProjectParallax'
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 
 function Projects() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -17,16 +17,24 @@ function Projects() {
 	  };
 	}, []);
   return (
-    <section className="projects-parallax dark:bg-bg-dark bg-gray-300 md:py-24 min-h-screen h-full mb-24" id='projects'>
-      {
+	<Fragment>
+   {
 					isMobile ? (
-						<MobileProjectsGrid />
+						<section className="mobile-projects dark:bg-bg-dark bg-gray-300 py-24" id='projects'>
+   
+    
+							<MobileProjectsGrid />
+  </section>
 					) : (
-						<ProjectsParallaxComp />
+						<section className="projects-parallax dark:bg-bg-dark bg-gray-300 md:py-24 min-h-screen h-full mb-24" id='projects'>
+   
+    
+							<ProjectsParallaxComp />
+  </section>
 					)
 				}
     
-  </section>
+				</Fragment>
   
   )
 }

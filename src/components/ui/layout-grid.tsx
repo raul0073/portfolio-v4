@@ -26,7 +26,7 @@ export const LayoutGrid = ({ cards }: { cards: ProductType[] }) => {
   return (
     <div className="w-full h-full px-4  grid grid-cols-2 max-w-7xl mx-auto gap-4 relative cursor-pointer pb-24 dark:bg-bg-dark bg-gray-300">
       {cards.map((card, i) => (
-        <div key={i} className={cn(`min-h-24`)}>
+        <div key={i} className={cn(`min-h-28`)}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
@@ -35,7 +35,7 @@ export const LayoutGrid = ({ cards }: { cards: ProductType[] }) => {
               selected?.url === card.url
                 ? "cursor-pointer absolute inset-0 h-1/2 w-full m-auto z-50 flex justify-center items-center flex-wrap flex-col "
                 : lastSelected?.url === card.url
-                ? "z-40 bg-appBlue/80 dark:bg-appYellow/80 h-full w-full col-span-2 rounded-t-xl"
+                ? "z-40 bg-appBlue/80 dark:bg-appYellow/80 h-full w-full col-span-2 rounded-tr-xl rounded-bl-xl"
                 : "bg-transparent  h-full w-full rounded-none"
             )}
             layoutId={`card-${card.url}`}
@@ -62,8 +62,8 @@ const ImageComponent = ({ card }: { card: ProductType }) => {
     <motion.img
       layoutId={`image-${card.url}-image`}
       src={card.thumbnail}
-      height="500"
-      width="500"
+      height="700"
+      width="700"
       className={cn(
         "object-cover object-top absolute inset-0 h-full w-full transition duration-200 "
       )}
