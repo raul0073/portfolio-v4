@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "../components/Theme/ThemeProvider";
@@ -33,7 +34,7 @@ export default function RootLayout({
 					type="text/css"
 					href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
 				/>
-					<script
+				<script
 					defer
 					src="https://cloud.umami.is/script.js"
 					data-website-id="202d637c-95fe-43d9-b27b-1751a1e91ced"></script>
@@ -46,6 +47,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange>
 					{children}
+					<SpeedInsights />
 				</ThemeProvider>
 			</body>
 		</html>

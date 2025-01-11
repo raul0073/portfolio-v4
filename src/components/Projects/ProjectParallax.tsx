@@ -1,6 +1,6 @@
 
+import { projectsData } from "@/app/Data/Projects/projects";
 import { ProjectsParallax } from "../ui/projects-parallax";
-import projectData from "./../../app/Data/ProjectsPage/projects.json";
 
 export type ProductType = {
 	name: string;
@@ -12,5 +12,5 @@ export type ProductType = {
 	thumbnail: string;
 };
 export function ProjectsParallaxComp() {
-	return <ProjectsParallax products={projectData.projects} />;
+	return <ProjectsParallax products={projectsData} />;
 }

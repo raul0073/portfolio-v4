@@ -1,6 +1,6 @@
 export const EXPERIENCE_DATA = [
 	{
-		title: "2020 - Present",
+		title: "2021 - Present",
 		content: (
 			<div>
 				<p className="dark:text-stone-200 text-zinc-900 text-lg md:text-xl  mb-8">

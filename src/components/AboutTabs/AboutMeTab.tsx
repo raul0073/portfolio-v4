@@ -1,6 +1,6 @@
 import { SOCIAL_ICONS } from "@/app/assets/icons/socialIcons/socialIcons";
+import { aboutData } from "@/app/Data/About/about";
 import { cn } from "@/lib/utils";
-import aboutData from "./../../app/Data/AboutPage/about.json";
 
 function AboutMeTab() {
 	return (
@@ -8,10 +8,10 @@ function AboutMeTab() {
 			{/* About Text */}
 			<div className="">
 				<div className="text space-y-2 font-abadi font-normal text-base md:text-lg dark:text-bg-light/70 text-zinc-900/80 ">
-					<p>{aboutData.about.digging1}</p>
-					<p>{aboutData.about.digging2}</p>
-					<p>{aboutData.about.digging3}</p>
-					<p className="pt-4">{aboutData.about.digging4}</p>
+					<p>{aboutData.digging1}</p>
+					<p>{aboutData.digging2}</p>
+					<p>{aboutData.digging3}</p>
+					<p className="pt-4">{aboutData.digging4}</p>
 				</div>
 				<div className="actions flex justify-center gap-4 mt-[10%]">
 					{SOCIAL_ICONS.map((icon) => {

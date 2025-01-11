@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { LayoutGrid } from "../ui/layout-grid";
-import projectData from "./../../app/Data/ProjectsPage/projects.json";
+import { projectsData } from "@/app/Data/Projects/projects";
 
 export function MobileProjectsGrid() {
   return (
@@ -26,7 +26,7 @@ export function MobileProjectsGrid() {
 				Some of my recent work && projects that fits this grid.
 			</motion.p>
 		</motion.div>
-      <LayoutGrid cards={projectData.projects} />
+      <LayoutGrid cards={projectsData} />
     </div>
   );
 }

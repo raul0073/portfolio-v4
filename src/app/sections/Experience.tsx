@@ -1,5 +1,5 @@
 import { ExperienceTimeline } from '@/components/Experience/ExperienceComp'
-import { EXPERIENCE_DATA } from '../Data/ExperiencePage/experienceData'
+import { EXPERIENCE_DATA } from '../Data/Experience/experienceData'
 
 function Experience() {
   return (

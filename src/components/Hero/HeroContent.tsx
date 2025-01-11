@@ -1,8 +1,9 @@
 "use client";
 import { motion, stagger, useAnimate } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { MouseEvent, useEffect, useRef } from "react";
 import SplitType from "split-type";
 import ButtonComp from "../ui/ButtonComp";
+import Link from "next/link";
 function HeroContent() {
 	const titleRef = useRef<HTMLHeadingElement>(null); 
 	const highlightRef = useRef<HTMLSpanElement>(null);
@@ -10,7 +11,14 @@ function HeroContent() {
 	const [titleScope, titleAnimate] = useAnimate();
 	//eslint-disable-next-line
 	const [highlightScope, highlightAnimate] = useAnimate();
-
+	function handleNavigationMove(e: MouseEvent<HTMLAnchorElement>) {
+		e.preventDefault();
+		const url = new URL(e.currentTarget.href);
+		const hash = url.hash;
+		const target = document.querySelector(hash);
+		if (!target) return;
+		target.scrollIntoView({ behavior: "smooth" });
+	}
 	useEffect(() => {
 		if (titleRef.current) {
 			// Split text in the heading
@@ -78,7 +86,11 @@ function HeroContent() {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.7, delay: 2.1 }}
 				className="action w-full my-6">
-				<ButtonComp
+				<Link
+				href={'#projects'}
+				onClick={handleNavigationMove}
+				>
+					<ButtonComp
 					title="my work"
 					data-umami-event="my work"
 					className="group  hover:border-appBlue/40 dark:hover:border-appYellow/40 dark:hover:text-white hover:bg-transparent"
@@ -104,6 +116,7 @@ function HeroContent() {
 						</svg>
 					}
 				/>
+				</Link>
 			</motion.div>
 		</div>
 	);
