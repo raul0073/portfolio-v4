@@ -16,12 +16,13 @@ function NavigationComp() {
 					<Signature />
 					{/* <NavigationLinks /> */}
 					<HamburgerMenuBtn
+					data-umami-event="hamburger open"
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}
 						aria-label={isOpen ? "Close menu" : "Open menu"}
 					/>
 					{isOpen && <MobileNavigation setIsOpen={setIsOpen} isOpen={isOpen} />}
-					<ButtonComp title="let's talk" className="hidden md:flex py-2 dark:hover:bg-appYellow/80 dark:hover:border-appYellow hover:bg-appBlue/80 hover:border-appBlue " />
+					<ButtonComp data-umami-event="let's talk" title="let's talk" className="hidden md:flex py-2 dark:hover:bg-appYellow/80 dark:hover:border-appYellow hover:bg-appBlue/80 hover:border-appBlue " />
 				
 			</div>
 		</header>

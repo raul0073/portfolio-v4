@@ -63,6 +63,7 @@ function FooterComp() {
 						viewport={{once: true}}
 						>
 							<ButtonComp
+							data-umami-event="footer email"
 							icon={<ArrowUpRight />}
 							title="razm.work@gmail.com"
 							className="lowercase border-dashed border-appBlue dark:border-appYellow2"

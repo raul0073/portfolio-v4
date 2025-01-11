@@ -80,6 +80,7 @@ function HeroContent() {
 				className="action w-full my-6">
 				<ButtonComp
 					title="my work"
+					data-umami-event="my work"
 					className="group  hover:border-appBlue/40 dark:hover:border-appYellow/40 dark:hover:text-white hover:bg-transparent"
 					icon={
 						<svg
