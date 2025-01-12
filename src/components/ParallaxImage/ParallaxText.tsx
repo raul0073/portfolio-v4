@@ -21,7 +21,7 @@ export default function ParallaxText() {
 	return (
 		<section className="parallax-text pt-24 bg-gradient-to-br from-transparent to-bg-light/40">
 			<div className="flex justify-start items-center px-4 h-full py-2">
-				<div className="text-xl md:text-4xl max-w-xl h-full items-start flex font-normal text-left text-black/60">
+				<div className="text-xl md:text-4xl max-w-xl h-full items-start flex font-normal text-left  text-white md:text-appYellow2">
 					<AnimatePresence mode="wait">
 						{scrollY < 3350 ? (
 							<motion.span
@@ -40,16 +40,16 @@ export default function ParallaxText() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: 10 }}
 								transition={{ duration: 0.3 }}>
-								<span className="relative inline-flex justify-end lg:-right-[45rem] w-full">
+								<span className="relative inline-flex justify-end w-full xl:-right-[600px]">
 									<span className="  bg-clip-text text-transparent bg-gradient-to-r  from-appYellow to-appYellow2 text-4xl">
 										This is Noah
 										<Image
 											src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/Hand-drawn-arrow-blue.png"
 											alt="arrow_to_Noah"
 											loading="eager"
-											width={300}
-											height={300}
-											className="hidden md:inline absolute -top-[200%] -right-[100%] rotate-12  md:scale-100"
+											width={900}
+											height={900}
+											className="hidden xl:inline absolute -top-[200%] -right-[100%] rotate-12 "
 										/>
 									</span>
 								</span>

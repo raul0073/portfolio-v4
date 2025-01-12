@@ -74,7 +74,7 @@ const ImageComponent = ({ card }: { card: ProductType }) => {
 
 const SelectedCard = ({ selected }: { selected: ProductType | null }) => {
   return (
-    <div className="bg-black/90 h-full w-full flex flex-col justify-end  shadow-2xl relative z-[60] cursor-default">
+    <div className="bg-black/40 h-full w-full flex flex-col justify-end  shadow-2xl relative z-[60] cursor-default">
       <motion.div
         initial={{
           opacity: 0,
@@ -88,7 +88,7 @@ const SelectedCard = ({ selected }: { selected: ProductType | null }) => {
 				{selected?.name} <br />
        
 			</h2>
-      <Link className="absolute right-4 top-4 items-center inline z-30 text-appBlue/60"  href={selected?.url || "#"} target="_blank"><ArrowRight width={20} /></Link>
+      <Link className="absolute right-4 top-4 items-center inline z-30 text-appBlue/60"  href={selected?.url || "#"} target="_blank"><ArrowRight width={15} /></Link>
         <Link className="absolute right-10 top-4 items-center inline z-30 text-appBlue/60"  href={selected?.git || "#"} target="_blank"><i className="devicon-github-original w-4 h-auto"  /></Link>
       <motion.div
         layoutId={`content-${selected?.url}`}
