@@ -5,6 +5,7 @@ import ButtonComp from "../ui/ButtonComp";
 import { useEffect } from "react";
 import SplitType from "split-type";
 import { menuOptions } from "@/app/Data/Navigation/data";
+import Link from "next/link";
 
 function FooterComp() {
 	const [scope, animate] = useAnimate();
@@ -62,12 +63,14 @@ function FooterComp() {
 						transition={{duration: .8, ease: "easeInOut", delay: .8}}
 						viewport={{once: true}}
 						>
+							<Link href={'mailto:razm.work@gmail.com'}>
 							<ButtonComp
 							data-umami-event="footer email"
 							icon={<ArrowUpRight />}
 							title="razm.work@gmail.com"
 							className="lowercase border-dashed border-appBlue dark:border-appYellow2"
 						/>
+						</Link>
 						</motion.div>
 					</div>
 					<nav className=" ">

@@ -6,6 +6,10 @@ import StackTab from "./StackTab";
 import { Tabs } from "../ui/tabs";
 import Image from "next/image";
 
+const BUCKET = process.env.NEXT_PUBLIC_BUCKET
+const profileAvatar = `${BUCKET}/v4/assets/profile_avatar.jpeg`
+
+
 export function AboutTabs() {
 	const tabs = [
 		{
@@ -20,10 +24,10 @@ export function AboutTabs() {
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 						className="mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4 tracking-wide">
 						<Image
-				src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png"
+				src={profileAvatar}
 				alt="profile_avatar"
-				width={80}
-				height={80}
+				width={40}
+				height={40}
 				loading="lazy"
 				className="inline-flex mr-4 profile-avatar dark:bg-appGray bg-appGray/40 hover:-translate-y-2 transition-transform duration-200 ease-in-out"
 			/>

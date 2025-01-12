@@ -21,7 +21,7 @@ export default function ParallaxText() {
 	return (
 		<section className="parallax-text pt-24 bg-gradient-to-br from-transparent to-bg-light/40">
 			<div className="flex justify-start items-center px-4 h-full py-2">
-				<div className="text-4xl max-w-xl h-full items-start flex font-normal text-left bg-gradient-to-r font-base from-appYellow to-appYellow2 bg-clip-text text-transparent">
+				<div className="text-xl md:text-4xl max-w-xl h-full items-start flex font-normal text-left text-black/60">
 					<AnimatePresence mode="wait">
 						{scrollY < 3350 ? (
 							<motion.span

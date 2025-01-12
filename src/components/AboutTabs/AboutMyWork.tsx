@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { WobbleCard } from "../ui/wobble-card";
+import { Check } from "lucide-react";
 export function AboutMyWork() {
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
@@ -48,9 +49,9 @@ export function AboutMyWork() {
 						Converting data into visuals
 					</h2>
 					<p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-					✔️ Analytics you will never use. <br />
-					✔️ Charts that will make you bang your head against the wall. <br />
-					✔️ A Dashboard you grow to hate.
+					<Check className="inline text-lime-400 font-bold"/> Analytics you will never use. <br />
+					<Check className="inline text-lime-400 font-bold"/> Charts that will make you bang your head against the wall. <br />
+					<Check className="inline text-lime-400 font-bold"/> A Dashboard you grow to hate.
 					</p>
 				</div>
 				<Image

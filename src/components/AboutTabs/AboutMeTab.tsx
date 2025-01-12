@@ -1,6 +1,7 @@
 import { SOCIAL_ICONS } from "@/app/assets/icons/socialIcons/socialIcons";
 import { aboutData } from "@/app/Data/About/about";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 function AboutMeTab() {
 	return (
@@ -17,8 +18,11 @@ function AboutMeTab() {
 					{SOCIAL_ICONS.map((icon) => {
 						const iconName = icon.name;
 						return (
-							<button
-								key={icon.name}
+							<Link target="_blank" href={icon.link as string}
+							key={icon.name}
+							>
+								<button
+								
 								data-umami-iconname={iconName}
 								className="group text-white  inline-flex items-center justify-center dark:bg-gradient-to-b dark:from-[#464d55] dark:to-[#25292e] bg-gradient-to-b from-stone-600 to-stone-800  text-base px-6 transition duration-150 shadow-[0_10px_20px_rgba(0,_0,_0,_.1),0_3px_6px_rgba(0,_0,_0,_.05)] hover:shadow-[rgba(0,_1,_0,_.2)_0_2px_8px] active:outline-none hover:opacity-80 rounded-full w-12 h-12 mt-8">
 								<i
@@ -26,6 +30,7 @@ function AboutMeTab() {
 										`${icon.class} group-hover:text-appYellow2`
 									)}></i>
 							</button>
+							</Link>
 						);
 					})}
 				</div>
