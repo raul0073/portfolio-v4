@@ -47,8 +47,8 @@ export default function ParallaxText() {
 											src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/Hand-drawn-arrow-blue.png"
 											alt="arrow_to_Noah"
 											loading="eager"
-											width={900}
-											height={900}
+											width={500}
+											height={500}
 											className="hidden xl:inline absolute -top-[200%] -right-[100%] rotate-12 "
 										/>
 									</span>
