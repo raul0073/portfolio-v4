@@ -15,14 +15,14 @@ export function AnimatedExperienceLocationImageModal({
 	img: { src: string; name: string, text: string };
 }) {
 	return (
-		<div className="py-40  flex items-center justify-center">
+		<div className="animated-picture py-40  flex items-center justify-center">
 			<Modal>
-				<ModalTrigger className="flex justify-center group/modal-btn">
+				<ModalTrigger className="animated-picture-trigger flex justify-center group/modal-btn">
 					<LucideImageUpscale className="text-bg-dark/60 dark:text-bg-light/60" />
 				</ModalTrigger>
 				<ModalBody>
 					<ModalContent>
-						<h4 className="text-lg capitalize md:text-2xl text-neutral-300 dark:text-neutral-100 font-bold text-center mb-2">
+						<h4 className="img-title text-lg capitalize md:text-2xl text-neutral-300 dark:text-neutral-100 font-bold text-center mb-2">
 							{img?.name}
 						</h4>
             <motion.p
@@ -48,7 +48,7 @@ export function AnimatedExperienceLocationImageModal({
 									rotate: 0,
 									zIndex: 100,
 								}}
-								className="rounded-xl -mr-4 mt-4 p-1 bg-transparent  flex-shrink-0 overflow-hidden">
+								className="image-wrapper rounded-xl -mr-4 mt-4 p-1 bg-transparent  flex-shrink-0 overflow-hidden">
 								<Image
 									src={img?.src}
 									alt={`${img?.name}`}

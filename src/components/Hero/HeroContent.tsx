@@ -55,7 +55,7 @@ function HeroContent() {
 		}
 	}, [highlightAnimate]);
 	return (
-		<div className="content -mt-6 md:mt-0">
+		<div className="hero-content -mt-6 md:mt-0">
 			<div className="tex flex flex-col items-start">
 				<motion.h1
 					initial={{ opacity: 0 }}

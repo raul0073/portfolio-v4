@@ -34,15 +34,6 @@ export function TrackingAlertDialog() {
 							className="group text-white inline-flex items-center justify-center dark:bg-gradient-to-b dark:from-[#464d55] dark:to-[#25292e] bg-gradient-to-b from-stone-600 to-stone-800 w-1/2  py-2 transition duration-150 shadow-[0_10px_20px_rgba(0,_0,_0,_.1),0_3px_6px_rgba(0,_0,_0,_.05)] hover:shadow-[rgba(0,_1,_0,_.2)_0_2px_8px] active:outline-none hover:opacity-80 rounded-xl uppercase pb-2">
 							Fine
 						</button>
-						{/* <Image
-							src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/minimalist-pile-delicious-cookies-copy-space-removebg-preview.png"
-							alt="cookie_picture"
-							width={100}
-							height={100}
-							loading="lazy"
-							className="hidden absolute -right-0 -top-16 md:block"
-						/>
-						 */}
 					</div>
 				</motion.section>
 			)}

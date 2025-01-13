@@ -4,10 +4,10 @@ import { WobbleCard } from "../ui/wobble-card";
 import { Check } from "lucide-react";
 export function AboutMyWork() {
 	return (
-		<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+		<div className="about-mywork grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
 			<WobbleCard
-				containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
-				className="">
+				containerClassName=" col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+				className="card1">
 				<div className="max-w-xs">
 					<h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 						Building apps that make sense
@@ -25,8 +25,8 @@ export function AboutMyWork() {
 					className="absolute -right-24 grayscale filter -bottom-48 object-contain rounded-2xl"
 				/>
 			</WobbleCard>
-			<WobbleCard containerClassName="col-span-1 min-h-[300px]">
-				<div className="grid grid-cols-1">
+			<WobbleCard containerClassName="col-span-1 min-h-[300px]" className="card2">
+				<div className=" grid grid-cols-1">
 					<h2 className="col-span-2 max-w-80  text-left -mt-8 text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 						Custom reports
 					</h2>
@@ -43,7 +43,7 @@ export function AboutMyWork() {
 					className="absolute md:-left-1/2 -left-40 md:-bottom-30 -bottom-40 object-contain rounded-2xl"
 				/>
 			</WobbleCard>
-			<WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+			<WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]" className="card3">
 				<div className="max-w-sm">
 					<h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 						Converting data into visuals

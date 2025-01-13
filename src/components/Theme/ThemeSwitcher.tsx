@@ -13,7 +13,7 @@ export function ThemeSwitcher() {
 				<Button
 					variant="outline"
 					size="icon"
-					className="group relative rounded-full outline-none border-none text-zinc-900"
+					className="theme-toggle group relative rounded-full outline-none border-none text-zinc-900"
 					onClick={() => setTheme("dark")}>
 					<Moon className="group-hover:-rotate-[20deg]" width={30} />
 				</Button>
@@ -21,7 +21,7 @@ export function ThemeSwitcher() {
 				<Button
 					variant="outline"
 					size="icon"
-					className="rounded-full outline-none border-none text-appYellow"
+					className="theme-toggle rounded-full outline-none border-none text-appYellow"
 					onClick={() => setTheme("light")}>
 					<Sun className="" />
 				</Button>

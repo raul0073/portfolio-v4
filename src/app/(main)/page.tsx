@@ -1,10 +1,22 @@
 import { TrackingAlertDialog } from "@/components/TrackingAlert/TrackingAlertDialog";
 import { Fragment } from "react";
 import Hero from "../sections/Hero";
-import About from "../sections/About"
-import Projects from "../sections/Projects";
-import Experience from "../sections/Experience";
-import ImageParallax from "@/components/ParallaxImage/ParallaxText"
+import dynamic from "next/dynamic";
+
+
+// dynamic import for comp under hero
+const DynamicAbout = dynamic(()=>import('../sections/About'), {
+	loading: ()=> <h2>Loading</h2>
+})
+const DynamicParallax = dynamic(()=>import('@/components/ParallaxImage/ParallaxText'), {
+	loading: ()=> <h2>Loading</h2>
+})
+const DynamicProjects = dynamic(()=>import('../sections/Projects'), {
+	loading: ()=> <h2>Loading</h2>
+})
+const DynamicExperience = dynamic(()=>import('../sections/Experience'), {
+	loading: ()=> <h2>Loading</h2>
+})
 
 
 export default function Home() {
@@ -12,10 +24,10 @@ export default function Home() {
 		<Fragment>
 			<TrackingAlertDialog />
 			<Hero />
-			<About />
-			<ImageParallax />
-			<Projects />
-			<Experience />
+			<DynamicAbout />
+			<DynamicParallax />
+			<DynamicProjects />
+			<DynamicExperience />
 		</Fragment>
 	);
 }

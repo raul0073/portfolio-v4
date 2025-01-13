@@ -7,8 +7,8 @@ function Layout({children} : { children: ReactNode}) {
   return (
     <Fragment>
         <NavigationComp />
-        <main className='relative w-full h-full min-h-screen pb-24 pt-20'>
-        <span className='fixed bottom-10 right-5 rounded-full z-50'>
+        <main className='main relative w-full h-full min-h-screen pb-24 pt-20'>
+        <span className='theme-switcher fixed bottom-10 right-5 rounded-full z-50'>
         <ThemeSwitcher />
         </span>
           {children}</main>

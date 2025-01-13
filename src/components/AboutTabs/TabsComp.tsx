@@ -16,7 +16,7 @@ export function AboutTabs() {
 			title: "About Me",
 			value: "about me",
 			content: (
-				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
+				<div className="aboutMe-pop scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
 				
 					<motion.p
 						initial={{ opacity: 0, y: -50 }}
@@ -47,7 +47,7 @@ export function AboutTabs() {
 			title: "About My Work",
 			value: "About My Work",
 			content: (
-				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
+				<div className="aboutMywork-pop scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
 					
 					<motion.p
 						initial={{ opacity: 0, y: -50 }}
@@ -69,7 +69,7 @@ export function AboutTabs() {
 			title: "most used tools",
 			value: "most used tools",
 			content: (
-				<div className=" scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
+				<div className="tools-pop scrollbar-thin scrollbar-track-appGray/10 dark:scrollbar-thumb-appYellow/60 scrollbar-thumb-appBlue/60 w-full overflow-y-auto overflow-x-hidden scroll- relative h-full  p-4 md:p-10 text-xl md:text-2xl font-bold  dark:bg-bg-dark bg-bg-light border dark:border-white/10 border-stone-300 hover:rounded-2xl transition-transform duration-200 ease-in">
 				
 					<motion.p
 						initial={{ opacity: 0, y: -50 }}

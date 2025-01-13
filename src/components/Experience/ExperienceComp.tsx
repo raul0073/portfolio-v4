@@ -29,14 +29,14 @@ export const ExperienceTimeline = ({ data }: { data: TimelineEntry[] }) => {
 	const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
 	return (
-		<div className="w-full  md:px-10" ref={containerRef}>
+		<div className="w-full experience-section  md:px-10" ref={containerRef}>
 			<div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
 				<motion.h1
 					initial={{ y: 20, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					transition={{ duration: 0.4, ease: "easeIn" }}
 					viewport={{ once: true, amount: 0.9 }}
-					className="text-5xl md:text-7xl capitalize font-abadiBold font-bold dark:text-appYellow text-appBlue">
+					className="header text-5xl md:text-7xl capitalize font-abadiBold font-bold dark:text-appYellow text-appBlue">
 					experience <br />
 				</motion.h1>
 				<motion.p
@@ -49,7 +49,7 @@ export const ExperienceTimeline = ({ data }: { data: TimelineEntry[] }) => {
 				</motion.p>
 			</div>
 
-			<div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+			<div ref={ref} className="timeline relative max-w-7xl mx-auto pb-20">
 				{data.map((item, index) => (
 					<div
 						key={index}

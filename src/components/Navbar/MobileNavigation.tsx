@@ -34,7 +34,7 @@ function MobileNavigation({ isOpen, setIsOpen }: MobileNavigationProps) {
 					animate="animate"
 					exit="exit"
 					transition={{ duration: 0.5, ease: "easeInOut" }}
-					className="w-full fixed top-16 left-0 bg-bg-light dark:bg-zinc-900 z-50 flex justify-start overflow-hidden">
+					className="mobile-navigation-wrapper w-full fixed top-16 left-0 bg-bg-light dark:bg-zinc-900 z-50 flex justify-start overflow-hidden">
 					<nav className="text-left uppercase w-full">
 						<ul className="pt-12 px-4 w-full">
 							{menuOptions.map(({ label, href, Icon }) => (
