@@ -7,23 +7,20 @@ export default function ParallaxText() {
 	const [isTopVisible, setIsTopVisible] = useState(false);
 	const imageRef = useRef<HTMLDivElement>(null);
 
-	// Track visibility of the parallax image
 	useEffect(() => {
 		const handleScroll = () => {
 			if (imageRef.current) {
 				const rect = imageRef.current.getBoundingClientRect();
-				// Check if the top of the image is visible in the viewport
 				setIsTopVisible(rect.top >= 0 && rect.top <= window.innerHeight);
 			}
 		};
 
 		window.addEventListener("scroll", handleScroll);
-		// Cleanup listener on component unmount
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	return (
-		<section className="parallax-text">
+		<section className="parallax-noah bg-gray-300 dark:bg-zinc-800">
 			<div
 				ref={imageRef} 
 				className="relative bg-cover bg-fixed h-[20vh] bg-no-repeat bg-center"
@@ -33,7 +30,7 @@ export default function ParallaxText() {
 			</div>
 
 			<div className="flex justify-start items-center px-4 h-full py-2">
-				<div className="text-xl md:text-4xl max-w-xl h-full items-start flex font-normal text-left text-white md:text-appYellow2">
+				<div className="text-xl md:text-4xl max-w-xl h-full items-start flex font-normal text-left text-zinc-600 dark:text-slate-200 ">
 					<AnimatePresence mode="wait">
 						{isTopVisible ? (
 							<motion.span
@@ -53,7 +50,7 @@ export default function ParallaxText() {
 								exit={{ opacity: 0, y: 10 }}
 								transition={{ duration: 0.3 }}>
 								<span className="relative inline-flex justify-end w-full xl:-right-[600px]">
-									<span className="text-white md:text-appYellow2 text-xl md:text-4xl">
+									<span className="text-zinc-600 dark:text-slate-200  text-xl md:text-4xl">
 										This is Noah
 										<Image
 											src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/Hand-drawn-arrow-blue.png"
