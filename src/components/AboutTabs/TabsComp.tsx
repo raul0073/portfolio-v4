@@ -28,6 +28,10 @@ export function AboutTabs() {
 				alt="profile_avatar"
 				width={40}
 				height={40}
+				style={{
+					width: "40px",
+					height: "auto"
+				}}
 				loading="lazy"
 				className="inline-flex mr-4 profile-avatar dark:bg-appGray bg-appGray/40 hover:-translate-y-2 transition-transform duration-200 ease-in-out"
 			/>
