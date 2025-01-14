@@ -18,7 +18,7 @@ const AxureFont = localFont({
 });
 export const metadata: Metadata = {
 	title: "rm | Portfolio",
-	description: "Created by RMS",
+	description: "Raz Massami personal website",
 };
 
 export default function RootLayout({
@@ -34,10 +34,7 @@ export default function RootLayout({
 					type="text/css"
 					href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
 				/>
-				<script
-					defer
-					src="https://cloud.umami.is/script.js"
-					data-website-id="202d637c-95fe-43d9-b27b-1751a1e91ced"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="95b4ccde-2124-47e1-86e9-cf01b41cdaff"></script>
 			</head>
 			<body
 				className={`${Abadi.variable} ${AbadiBold.variable} ${AxureFont.variable} font-abadi antialiased bg-stone-200 dark:bg-zinc-900 text-stone-900 dark:text-stone-200`}>
