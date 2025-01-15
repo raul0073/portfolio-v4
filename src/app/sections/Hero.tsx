@@ -30,7 +30,7 @@ function Hero() {
 						}}>
 						<Image
 							src={img}
-							loading="eager"
+							loading="lazy"
 							alt="hero_art"
 							className="size-full object-cover"
 							width={1200}

@@ -72,13 +72,10 @@ export const ExperienceTimeline = ({ data }: { data: TimelineEntry[] }) => {
 							<h3 className="relative md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500 font-axure">
 								{item.title}
 							</h3>
-							<motion.div
-								initial={{ opacity: 0, y: "30%" }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.4, ease: "easeIn" }}
-								viewport={{ once: true }}>
+							<div
+								>
 								{item.content}
-							</motion.div>{" "}
+							</div>{" "}
 						</div>
 					</div>
 				))}

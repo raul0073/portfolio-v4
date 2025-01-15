@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import { LucideImageUpscale } from "lucide-react";
 import Image from "next/image";
 import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalTrigger,
+	Modal,
+	ModalBody,
+	ModalContent,
+	ModalTrigger,
 } from "../ui/animated-modal";
 
 export function AnimatedExperienceLocationImageModal({
 	img,
 }: {
-	img: { src: string; name: string, text: string };
+	img: { src: string; name: string; text: string };
 }) {
 	return (
 		<div className="animated-picture py-40  flex items-center justify-center">
@@ -25,13 +25,14 @@ export function AnimatedExperienceLocationImageModal({
 						<h4 className="img-title text-lg capitalize md:text-2xl text-neutral-300 dark:text-neutral-100 font-bold text-center mb-2">
 							{img?.name}
 						</h4>
-            <motion.p
-            initial={{opacity: 0, y: -50}}
-            whileInView={{opacity: 1, y: 0}}
-            transition={{ duration: 0.9, ease: "easeInOut" }}
-            viewport={{ once: true }}
-            className="mb-8 text-sm capitalize text-center text-neutral-300/60 dark:text-neutral-100/60"
-            >{img?.text}</motion.p>
+						<motion.p
+							initial={{ opacity: 0, y: -50 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.9, ease: "easeInOut" }}
+							viewport={{ once: true }}
+							className="mb-8 text-sm capitalize text-center text-neutral-300/60 dark:text-neutral-100/60">
+							{img?.text}
+						</motion.p>
 						<div className="flex justify-center items-center">
 							<motion.div
 								key={"image"}
@@ -52,8 +53,8 @@ export function AnimatedExperienceLocationImageModal({
 								<Image
 									src={img?.src}
 									alt={`${img?.name}`}
-									width="500"
-									height="500"
+									width={500}
+									height={500}
 									loading="lazy"
 									className="rounded-lg object-cover flex-shrink-0"
 								/>

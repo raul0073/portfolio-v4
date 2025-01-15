@@ -7,7 +7,7 @@ import { Tabs } from "../ui/tabs";
 import Image from "next/image";
 
 const BUCKET = process.env.NEXT_PUBLIC_BUCKET
-const profileAvatar = `${BUCKET}/v4/assets/profile_avatar.jpeg`
+const profileAvatar = `${BUCKET}/v4/assets/profile_avatar_small.jpg`
 
 
 export function AboutTabs() {

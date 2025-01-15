@@ -2,7 +2,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
-
+const BUCKET = process.env.NEXT_PUBLIC_BUCKET
+const arrowImg = `${BUCKET}/v4/assets/Hand-drawn-arrow-blue_small.png`
 export default function ParallaxText() {
 	const [isTopVisible, setIsTopVisible] = useState(false);
 	const imageRef = useRef<HTMLDivElement>(null);
@@ -53,9 +54,9 @@ export default function ParallaxText() {
 									<span className="text-zinc-600 dark:text-slate-200  text-xl md:text-4xl">
 										This is Noah
 										<Image
-											src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/Hand-drawn-arrow-blue.png"
+											src={arrowImg}
 											alt="arrow_to_Noah"
-											loading="eager"
+											loading="lazy"
 											width={500}
 											height={500}
 											className=" xl:inline absolute -top-[200%] -right-[100%] rotate-12 "
