@@ -6,7 +6,7 @@ export function AboutMyWork() {
 	return (
 		<div className="about-mywork grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
 			<WobbleCard
-				containerClassName=" col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+				containerClassName=" col-span-1 lg:col-span-2 h-full dark:bg-pink-800 bg-pink-600 min-h-[300px] lg:min-h-[300px]"
 				className="card1">
 				<div className="max-w-xs">
 					<h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
@@ -33,7 +33,7 @@ export function AboutMyWork() {
 					<h2 className="col-span-2 max-w-80  text-left -mt-8 text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
 						Custom reports
 					</h2>
-					<p className="mt-4 max-w-[26rem] text-left  mdtext-base/6 text-neutral-200">
+					<p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
 						I provide your data with tailored reports so you don&apos;t have to
 					</p>
 				</div>
@@ -43,11 +43,11 @@ export function AboutMyWork() {
 					height={200}
 					loading="lazy"
 					alt="dashboard_report_eleven"
-					className="md:flex absolute -bottom-24 md:-bottom-28 -left-8 object-contain rounded-2xl"
+					className="-bottom-28 lg:-bottom-28 absolute -left-8 object-contain rounded-2xl"
 				/>
 			</WobbleCard>
 			<WobbleCard
-				containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]"
+				containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[400px] lg:min-h-[500px] xl:min-h-[300px]"
 				className="card3">
 				<div className="max-w-sm">
 					<h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
@@ -62,11 +62,11 @@ export function AboutMyWork() {
 				</div>
 				<Image
 					src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/rms-cut.png"
-					width={500}
-					height={500}
+					width={300}
+					height={300}
 					loading="lazy"
 					alt="visualize_your_data_dashboard"
-					className="absolute -right-5  lg:-right-[20%] -bottom-10 md:-bottom-20 object-contain rounded-2xl"
+					className="absolute -right-5  lg:-right-[5%] -bottom-10 md:-bottom-20 lg:-bottom-8 object-contain rounded-2xl"
 				/>
 			</WobbleCard>
 		</div>

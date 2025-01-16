@@ -4,7 +4,7 @@ function StackTab() {
 	return (
 		<div className="stack w-full h-full ">
 		
-				<ul className="grid grid-cols-3 md:grid-cols-7 gap-4 md:gap-8 py-8">
+				<ul className="grid grid-cols-4 md:grid-cols-7 gap-4 md:gap-8 py-8">
 					{programingIcons.map((icon, i) => {
 						return (
 							<li

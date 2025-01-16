@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-
+import nosieBG from '@/app/assets/noise.webp'
 export const WobbleCard = ({
   children,
   containerClassName,
@@ -37,17 +37,17 @@ export const WobbleCard = ({
         transition: "transform 0.1s ease-out",
       }}
       className={cn(
-        "mx-auto w-full bg-indigo-800  relative rounded-2xl overflow-hidden",
+        "mx-auto w-full dark:bg-sky-700 bg-amber-400  relative rounded-2xl overflow-hidden",
         containerClassName
       )}
     >
-      <div
-        className="relative  h-full [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]  sm:mx-0 sm:rounded-2xl overflow-hidden"
-        style={{
-          boxShadow:
-            "0 10px 32px rgba(34, 42, 53, 0.12), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.05), 0 4px 6px rgba(34, 42, 53, 0.08), 0 24px 108px rgba(47, 48, 55, 0.10)",
-        }}
-      >
+    <div
+  className="relative h-full [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.2),rgba(0,0,0,0.4))] sm:mx-0 sm:rounded-2xl overflow-hidden"
+  style={{
+    boxShadow:
+      "0 10px 32px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.3), 0 24px 108px rgba(0, 0, 0, 0.5)",
+  }}
+>
         <motion.div
           style={{
             transform: isHovering
@@ -70,7 +70,7 @@ const Noise = () => {
     <div
       className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
       style={{
-        backgroundImage: "url(/noise.webp)",
+        backgroundImage: `${nosieBG}`,
         backgroundSize: "30%",
       }}
     ></div>
