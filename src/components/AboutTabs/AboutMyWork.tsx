@@ -1,4 +1,5 @@
-"use client";
+
+import { images } from "@/app/assets/images/images";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { WobbleCard } from "../ui/wobble-card";
@@ -18,7 +19,7 @@ export function AboutMyWork() {
 					</p>
 				</div>
 				<Image
-					src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/entry.png"
+					src={images.ABOUT.work.tahel}
 					width={350}
 					height={350}
 					loading="lazy"
@@ -38,7 +39,7 @@ export function AboutMyWork() {
 					</p>
 				</div>
 				<Image
-					src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/saas/experimental/experimental_report.png"
+					src={images.ABOUT.work.experimental}
 					width={200}
 					height={200}
 					loading="lazy"
@@ -61,7 +62,7 @@ export function AboutMyWork() {
 					</p>
 				</div>
 				<Image
-					src="https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/rms-cut.png"
+					src={images.ABOUT.work.rms}
 					width={300}
 					height={300}
 					loading="lazy"

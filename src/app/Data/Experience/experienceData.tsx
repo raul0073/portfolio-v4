@@ -1,9 +1,9 @@
 "use client";
+import { images } from "@/app/assets/images/images";
 import { AnimatedList } from "@/components/Experience/AnimatedList";
 import { AnimatedExperienceLocationImageModal } from "@/components/Experience/AnimatedPopoverPicture";
 import { motion } from "framer-motion";
 
-const BUCKET = process.env.NEXT_PUBLIC_BUCKET;
 export const EXPERIENCE_DATA = [
 	{
 		title: "2021 - Present",
@@ -12,7 +12,7 @@ export const EXPERIENCE_DATA = [
 				<span className="hidden xl:flex absolute right-0 bottom-0">
 					<AnimatedExperienceLocationImageModal
 						img={{
-							src: `${BUCKET}/v4/assets/locations/desert.jpg`,
+							src: images.EXPERIENCE.desert,
 							name: "Somewhere in Israel",
 							text: "going north is still an issue",
 						}}
@@ -74,7 +74,7 @@ export const EXPERIENCE_DATA = [
 				<span className="hidden xl:flex absolute right-0 bottom-0">
 					<AnimatedExperienceLocationImageModal
 						img={{
-							src: `${BUCKET}/v4/assets/locations/zambia.JPG`,
+							src: images.EXPERIENCE.zambia,
 							name: "Chililabombwe, Zambia",
 							text: "they are about to climb this mountain",
 						}}
@@ -135,7 +135,7 @@ export const EXPERIENCE_DATA = [
 				<span className="hidden xl:flex absolute right-0 bottom-0">
 					<AnimatedExperienceLocationImageModal
 						img={{
-							src: `${BUCKET}/v4/assets/locations/bacalar2.JPG`,
+							src: images.EXPERIENCE.bacalar,
 							name: "Quintana Roo, Bacalar",
 							text: "no saturation needed.",
 						}}
@@ -198,7 +198,7 @@ export const EXPERIENCE_DATA = [
 				<span className="hidden xl:flex absolute right-0 bottom-0">
 					<AnimatedExperienceLocationImageModal
 						img={{
-							src: `${BUCKET}/v4/assets/locations/southafrica.JPG`,
+							src: images.EXPERIENCE.sa,
 							name: "Coffee Bay, South Africa",
 							text: "she is looking right at me!",
 						}}
@@ -259,7 +259,7 @@ export const EXPERIENCE_DATA = [
 				<span className="hidden xl:flex absolute -top-[300%] right-0">
 					<AnimatedExperienceLocationImageModal
 						img={{
-							src: `${BUCKET}/v4/assets/locations/malabo.jpg`,
+							src: images.EXPERIENCE.malabo,
 							name: "Malabo, Equatorial Guinea",
 							text: "no, I'm not in it.",
 						}}

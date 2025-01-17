@@ -1,16 +1,9 @@
+import { ProductType } from "@/components/Projects/ProjectParallax";
 
 const ASSETS_URL = process.env.NEXT_PUBLIC_BUCKET
 
 
-export const projectsData: {
-  name: string;
-  subTitle: string;
-  description: string;
-  url: string;
-  git: string;
-  tech: string[];
-  thumbnail: string;
-}[] = [
+export const projectsData: ProductType[] = [
   {
     name: "Cleaners Service",
     subTitle: "Squeaky Clean Landing Page",
@@ -18,8 +11,22 @@ export const projectsData: {
     url: "http://www.lrv.co.il",
     git: "",
     tech: ["Next", "React", "Sass", "Material-UI", "AWS"],
-    thumbnail: `${ASSETS_URL}/assets/projectsBox/lrvDe.png`
+    thumbnail: `${ASSETS_URL}/assets/projectsBox/lrvDe.png`,
+    className: "",
+    thumbnailClass: ""
   },
+  {
+    name: "Synagogue Bookkeeping",
+    subTitle: "Local Synagogue Management WebApp",
+    description: "A full-stack web app (pro bono) for managing a local synagogue, built with Angular 18, Fastify server and MongoDB, featuring an admin panel. Hosted on AWS.",
+    url: "https://tiferet-gt-v2.netlify.app/",
+    git: "https://github.com/raul0073/SynagogueWebApp",
+    tech: ["Angular", "Ngrx", "Material-UI", "MongoDB", "Node", "Fastify", "AWS"],
+    thumbnail: `${ASSETS_URL}/v4/applications/tiferet_mobile_mock-removebg-preview.png`,
+    className: "bg-sky-700 h-84",
+    thumbnailClass: ""
+  },
+
   {
     name: "Football Academy Landing Page",
     subTitle: "Showcasing Football Academy Services",
@@ -27,25 +34,9 @@ export const projectsData: {
     url: "https://eleven-academy.co.il",
     git: "#",
     tech: ["Next", "React", "Sass", "TailWind"],
-    thumbnail: `${ASSETS_URL}/v4/landing_pages/eleven_academy_.png`
-  },
-  {
-    name: "Synagogue Bookkeeping",
-    subTitle: "Local Synagogue Management WebApp",
-    description: "A full-stack web app (pro bono) for managing a local synagogue, built with Next.js, React, and MongoDB, featuring an admin panel. Hosted on AWS.",
-    url: "https://tiferet-gt-v2.netlify.app/",
-    git: "https://github.com/raul0073/SynagogueWebApp",
-    tech: ["Angular", "Ngrx", "Material-UI", "MongoDB", "Node", "Fastify", "AWS"],
-    thumbnail: `${ASSETS_URL}/v4/applications/tiferet_mobile_mock-removebg-preview.png`
-  },
-  {
-    name: "Movies Subscriptions",
-    subTitle: "Movie Subscription Management",
-    description: "A full-stack web app built with React and Node.js/WebAPI for managing movie subscriptions. It includes user authentication and dynamic management features. Users can search, add, edit, and delete subscriptions.",
-    url: "http://moviesappproject.s3-website.eu-central-1.amazonaws.com/",
-    git: "https://github.com/raul0073/Movies-Subscriptions",
-    tech: ["React", "Sass", "Node", "Express", "NodeJs", "MongoDB"],
-    thumbnail: `${ASSETS_URL}/assets/projectsBox/project_movies.png`
+    thumbnail: `${ASSETS_URL}/v4/landing_pages/eleven_academy_.png`,
+    className: "",
+    thumbnailClass: "object-contain"
   },
   {
     name: "Shifts Organizer",
@@ -54,7 +45,20 @@ export const projectsData: {
     url: "https://sh1fter.netlify.app/",
     git: "https://github.com/raul0073/Shifter",
     tech: ["Next", "React", "Sass", "MongoDB", "Redux", "TailWind"],
-    thumbnail: `${ASSETS_URL}/v4/applications/shifter_mobile_mock-removebg-preview.png`
+    thumbnail: `${ASSETS_URL}/v4/applications/shifter_mobile_mock-removebg-preview.png`,
+    className:  "bg-green-500 h-84",
+    thumbnailClass: ""
+  },
+  {
+    name: "Movies Subscriptions",
+    subTitle: "Movie Subscription Management",
+    description: "A full-stack web app built with React and Node.js/WebAPI for managing movie subscriptions. It includes user authentication and dynamic management features. Users can search, add, edit, and delete subscriptions.",
+    url: "http://moviesappproject.s3-website.eu-central-1.amazonaws.com/",
+    git: "https://github.com/raul0073/Movies-Subscriptions",
+    tech: ["React", "Sass", "Node", "Express", "NodeJs", "MongoDB"],
+    thumbnail: `${ASSETS_URL}/assets/projectsBox/project_movies.png`,
+    className: "",
+    thumbnailClass: "object-contain"
   },
   {
     name: "Score Predictor",
@@ -63,16 +67,9 @@ export const projectsData: {
     url: "https://luzone.netlify.app/",
     git: "https://github.com/raul0073/euro24-score-predictor",
     tech: ["Next", "React", "Sass", "MongoDB", "Redux", "TailWind"],
-    thumbnail: `${ASSETS_URL}/v4/applications/predictor_mobile_mock-removebg-preview.png`
-  },
-  {
-    name: "Events Management WebApp",
-    subTitle: "Full-stack Project for Event Management",
-    description: "A full-stack web application using React & Next.js, with an Express server and MongoDB database. The mobile-friendly web app is built with SCSS and Tailwind.",
-    url: "https://tahel-events.netlify.app/",
-    git: "https://github.com/raul0073/Tahel-Events",
-    tech: ["Next", "React", "Redux", "Sass", "Node", "Express", "MongoDB", "Tailwind"],
-    thumbnail: `${ASSETS_URL}/v4/applications/Tahel_mobile_mock-removebg-preview.png`
+    thumbnail: `${ASSETS_URL}/v4/applications/predictor_mobile_mock-removebg-preview.png`,
+    className: "bg-white/90 h-84",
+    thumbnailClass: ""
   },
   {
     name: "Live Scores WebApp",
@@ -81,7 +78,9 @@ export const projectsData: {
     url: "https://rmscores.netlify.app/",
     git: "https://github.com/raul0073/LiveScores",
     tech: ["Next", "React", "Sass", "TailWind"],
-    thumbnail: `${ASSETS_URL}/v4/applications/scores_mobile_mock-removebg-preview.png`
+    thumbnail: `${ASSETS_URL}/v4/applications/scores_mobile_mock-removebg-preview.png`,
+    className: "bg-slate-600 h-84",
+    thumbnailClass: ""
   },
   {
     name: "Factory Management System",
@@ -90,6 +89,21 @@ export const projectsData: {
     url: "http://dotnetfinal.s3-website.eu-central-1.amazonaws.com/",
     git: "https://github.com/raul0073/FactoryManagmentSystem",
     tech: ["JavaScript", "Node", "Sass", "C#", "SQL"],
-    thumbnail: `${ASSETS_URL}/assets/projectsBox/project_factory.png`
-  }
+    thumbnail: `${ASSETS_URL}/assets/projectsBox/project_factory.png`,
+    className: "",
+    thumbnailClass: ""
+  },
+  {
+    name: "Events Management WebApp",
+    subTitle: "Full-stack Project for Event Management",
+    description: "A full-stack web application using React & Next.js, with an Express server and MongoDB database. The mobile-friendly web app is built with SCSS and Tailwind.",
+    url: "https://tahel-events.netlify.app/",
+    git: "https://github.com/raul0073/Tahel-Events",
+    tech: ["Next", "React", "Redux", "Sass", "Node", "Express", "MongoDB", "Tailwind"],
+    thumbnail: `${ASSETS_URL}/v4/applications/Tahel_mobile_mock-removebg-preview.png`,
+    className: "bg-violet-600 h-84",
+    thumbnailClass: ""
+  },
+
+
 ];

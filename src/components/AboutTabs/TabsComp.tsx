@@ -5,9 +5,8 @@ import { AboutMyWork } from "./AboutMyWork";
 import StackTab from "./StackTab";
 import { Tabs } from "../ui/tabs";
 import Image from "next/image";
+import { images } from "@/app/assets/images/images";
 
-const BUCKET = process.env.NEXT_PUBLIC_BUCKET
-const profileAvatar = `${BUCKET}/v4/assets/profile_avatar_small.jpg`
 
 
 export function AboutTabs() {
@@ -24,7 +23,7 @@ export function AboutTabs() {
 						transition={{ duration: 0.5, ease: "easeInOut" }}
 						className="mb-6 text-zinc-900/90 dark:text-white/70 p-2 md:p-4 tracking-wide">
 						<Image
-				src={profileAvatar}
+				src={images.ABOUT.me.profileAvatar}
 				alt="profile_avatar"
 				width={40}
 				height={40}
@@ -33,7 +32,7 @@ export function AboutTabs() {
 					height: "auto"
 				}}
 				loading="lazy"
-				className="inline-flex mr-4 profile-avatar dark:bg-appGray bg-appGray/40 hover:-translate-y-2 transition-transform duration-200 ease-in-out"
+				className="inline-flex mr-4 profile-avatar dark:bg-appGray bg-appGray/40 hover:-translate-y-2 transition-transform duration-200 ease-in-out saturate-150"
 			/>
 						
 						Raz Massami

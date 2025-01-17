@@ -8,7 +8,7 @@ import {
 	useTransform,
 } from "framer-motion";
 import { Link2 } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ProductType } from "../Projects/ProjectParallax";
@@ -142,7 +142,7 @@ export const ProjectCard = ({
 		name: string;
 		description: string;
 		url: string;
-		thumbnail: string;
+		thumbnail: string | StaticImageData;
 		tech: string[];
 		git: string;
 	};

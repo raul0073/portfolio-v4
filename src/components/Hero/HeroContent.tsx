@@ -1,11 +1,11 @@
 "use client";
 import { motion, stagger, useAnimate } from "framer-motion";
+import Link from "next/link";
 import { MouseEvent, useEffect, useRef } from "react";
 import SplitType from "split-type";
 import ButtonComp from "../ui/ButtonComp";
-import Link from "next/link";
 function HeroContent() {
-	const titleRef = useRef<HTMLHeadingElement>(null); 
+	const titleRef = useRef<HTMLHeadingElement>(null);
 	const highlightRef = useRef<HTMLSpanElement>(null);
 	//eslint-disable-next-line
 	const [titleScope, titleAnimate] = useAnimate();
@@ -56,7 +56,7 @@ function HeroContent() {
 	}, [highlightAnimate]);
 	return (
 		<div className="hero-content -mt-6 md:mt-0">
-			<div className="tex flex flex-col items-start">
+			<div className="flex flex-col items-start">
 				<motion.h1
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
@@ -77,8 +77,7 @@ function HeroContent() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 1.8 }}
 					className="mt-4 text-2xl dark:text-white/60 text-zinc-900/60">
-					Fueled by caffeine, sarcasm and the occasional Wi-Fi, I build
-					stuff.
+					Fueled by caffeine, sarcasm and the occasional Wi-Fi, I build stuff.
 				</motion.p>
 			</div>
 			<motion.div
@@ -86,36 +85,33 @@ function HeroContent() {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.7, delay: 2.1 }}
 				className="action w-full my-6">
-				<Link
-				href={'#projects'}
-				onClick={handleNavigationMove}
-				>
+				<Link href={"#projects"} onClick={handleNavigationMove}>
 					<ButtonComp
-					title="my work"
-					data-umami-event="my work"
-					className="group  hover:border-appBlue/40 dark:hover:border-appYellow/40 dark:hover:text-white hover:bg-transparent"
-					icon={
-						<svg
-							height="25px"
-							width="25px"
-							version="1.1"
-							id="Layer_1"
-							className="fill-zinc-900/30 dark:fill-white/30 group-hover:fill-appBlue dark:group-hover:fill-appYellow2"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512.04 512.04">
-							<g>
+						title="my work"
+						data-umami-event="my work"
+						className="group  "
+						icon={
+							<svg
+								height="25px"
+								width="25px"
+								version="1.1"
+								id="Layer_1"
+								className="fill-zinc-900/30 dark:fill-white/30 group-hover:fill-appBlue dark:group-hover:fill-appYellow2"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512.04 512.04">
 								<g>
-									<path
-										d="M508.933,146.807l-42.347-42.347c-4.267-4.053-10.88-4.053-15.147,0L256.027,300.193L60.507,104.46
+									<g>
+										<path
+											d="M508.933,146.807l-42.347-42.347c-4.267-4.053-10.88-4.053-15.147,0L256.027,300.193L60.507,104.46
 	                                                    c-4.267-4.053-10.88-4.053-15.147,0L3.12,146.807c-4.16,4.16-4.16,10.88,0,15.04L248.453,407.5c4.16,4.16,10.88,4.16,15.04,0
 	                                                    l245.333-245.653C513.093,157.687,513.093,150.967,508.933,146.807z M256.027,384.887L25.733,154.38l27.2-27.307l195.52,195.733
 	                                                    c4.267,4.053,10.88,4.053,15.147,0l195.52-195.733l27.2,27.307L256.027,384.887z"
-									/>
+										/>
+									</g>
 								</g>
-							</g>
-						</svg>
-					}
-				/>
+							</svg>
+						}
+					/>
 				</Link>
 			</motion.div>
 		</div>

@@ -27,10 +27,10 @@ export const AnimatedList: React.FC<AnimatedListProps> = ({ items, className }) 
         <motion.li
           key={key}
           variants={{
-            hidden: { opacity: 0, y: 20 },
+            hidden: { opacity: 0, y: -20 },
             visible: { opacity: 1, y: 0 },
           }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           {content}
         </motion.li>

@@ -1,11 +1,10 @@
 "use client";
 
+import { images } from "@/app/assets/images/images";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-const BUCKET = process.env.NEXT_PUBLIC_BUCKET;
 
-const arrowImg = `${BUCKET}/v4/assets/Hand-drawn-arrow-blue_small.png`;
 
 export default function ParallaxText() {
 	const [isTopVisible, setIsTopVisible] = useState(false);
@@ -33,7 +32,7 @@ export default function ParallaxText() {
 				ref={imageRef}
 				className="relative bg-cover bg-fixed h-[20vh] bg-no-repeat bg-center"
 				style={{
-					backgroundImage: `url("https://razportfolio.s3.eu-central-1.amazonaws.com/v4/assets/noah_cut.png")`,
+					backgroundImage: `url(${images.PARALLAX.bg})`,
 				}}>
 				<div className="overlay w-full h-full absolute left-0 top-0 bg-black/40 z-10 border"></div>
 				<div className="flex justify-start items-center px-4 h-full py-2 absolute left-2 md:left-12 top-1/2 z-10">
@@ -60,7 +59,7 @@ export default function ParallaxText() {
 										<span className="text-slate-200  text-xl md:text-4xl">
 											This is Noah
 											<Image
-												src={arrowImg}
+												src={images.PARALLAX.arrowImg}
 												alt="arrow_to_Noah"
 												loading="lazy"
 												width={500}

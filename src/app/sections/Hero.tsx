@@ -3,9 +3,8 @@ import HeroContent from "@/components/Hero/HeroContent";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { images } from "../assets/images/images";
 
-const img =
-	"https://images.pexels.com/photos/3524537/pexels-photo-3524537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 function Hero() {
 	const scrolledDiv = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({
@@ -22,20 +21,22 @@ function Hero() {
 						<HeroContent />
 					</div>
 				</div>
-				<div className="hero-art md:col-span-5 relative">
+				<div className="hero-art md:col-span-5 relative ">
 					<motion.div
-						className="mt-20 md:mt-0 md:size-full md:absolute md:right-0 h-full max-md:!w-full"
+						className="mt-20 md:mt-0 md:size-full md:absolute md:right-0 h-full max-md:!w-full "
 						style={{
 							width: imgWidth,
 						}}>
 						<Image
-							src={img}
+							src={images.HERO.heroImg}
 							loading="lazy"
 							alt="hero_art"
-							className="size-full object-cover"
-							width={1200}
-							height={860}
+							className="size-full object-cover  relative"
+							width={2400}
+							height={1200}
 						/>
+
+		
 					</motion.div>
 				</div>
 			</div>
