@@ -40,7 +40,7 @@ export const Tabs = ({
 		<>
 			<div
 				className={cn(
-					" flex flex-row items-center justify-start [perspective:1000px] py-4 sticky overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+					" flex flex-row items-center justify-start [perspective:1000px] md:py-4 sticky overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
 					containerClassName
 				)}>
 				{propTabs.map((tab, idx) => (
