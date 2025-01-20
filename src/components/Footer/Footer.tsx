@@ -51,7 +51,7 @@ function FooterComp() {
 				</div>
 				<div className="content grid grid-cols-1 lg:grid-cols-3">
 					<div className="col-span-2" ref={scope}>
-						<h2 className="text-5xl md:text-7xl capitalize mb-8">
+						<h2 className="text-5xl leading-tight md:text-7xl md:leading-[5.2rem]  capitalize mb-8">
 							after everything you&apos;ve seen, let&apos;s talks business
 						</h2>
 						<motion.div
@@ -59,10 +59,11 @@ function FooterComp() {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeInOut", delay: 0.8 }}
 							viewport={{ once: true }}>
-							<Link href={"mailto:razm.work@gmail.com"}>
+							<Link href={"mailto:razm.work@gmail.com"} className="group">
 								<ButtonComp
 									data-umami-event="footer email"
-									icon={<ArrowUpRight />}
+									iconAnimationDirection="upRight"
+									icon={<ArrowUpRight className="group-hover:text-appBlue dark:group-hover:text-appYellow2" />}
 									title="razm.work@gmail.com"
 									className="lowercase border-dashed border-appBlue dark:border-appYellow2"
 								/>

@@ -1,7 +1,8 @@
 const BUCKET = process.env.BUCKET || process.env.NEXT_PUBLIC_BUCKET
 export const images = {
     HERO: {
-        heroImg: `${BUCKET}/v4/assets/warm_hero2.png`,
+        heroImg: `${BUCKET}/v4/assets/IMG_0272_e.JPG`,
+        heroMobileImg: `${BUCKET}/v4/assets/me1-noBG.png`,
     },
     ABOUT: {
         me: {

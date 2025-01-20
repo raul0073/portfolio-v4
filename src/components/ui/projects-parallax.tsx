@@ -7,7 +7,7 @@ import {
 	useSpring,
 	useTransform,
 } from "framer-motion";
-import { Link2 } from "lucide-react";
+import { ArrowUpRightFromSquare } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -165,7 +165,7 @@ export const ProjectCard = ({
 					alt={project.name}
 				/>
 			</div>
-			<div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 dark:bg-black/90 bg-slate-800/90 rounded-xl pointer-events-none px-2"></div>
+			<div className="absolute inset-0 h-full w-full opacity-0 group-hover/project:opacity-80 dark:bg-black/90 bg-slate-900/90 rounded-xl pointer-events-none px-2"></div>
 			<h2 className="absolute top-10 left-4 opacity-0  group-hover/project:opacity-100  font-base bg-clip-text bg-gradient-to-br  from-white/80 to-white text-transparent mb-4 font-abadiBold text-2xl capitalize ">
 				{project.name} <br />
 			</h2>
@@ -182,15 +182,15 @@ export const ProjectCard = ({
 						) : null;
 					})}
 				</ul>
-				<p className="bg-gradient-to-r font-base from-slate-200 to-slate-400 bg-clip-text text-transparent">
+				<p className="bg-gradient-to-r font-base dark:from-slate-200 from-stone-100 to-slate-300 dark:to-slate-400 bg-clip-text text-transparent">
 					{project.description}
 				</p>
 				<div className="w-full flex justify-end items-center gap-2 mt-2">
-					<Link href={project.url} target="_blank">
-						<Link2 className="text-appBlue -rotate-45" />
-					</Link>
 					<Link href={project.git} target="_blank">
-						<span className="devicon-github-original text-appBlue"></span>
+						<span className="devicon-github-original text-appBlue text-normal"></span>
+					</Link>
+					<Link href={project.url} target="_blank">
+						<ArrowUpRightFromSquare className="text-appBlue w-4 h-4" />
 					</Link>
 				</div>
 			</div>

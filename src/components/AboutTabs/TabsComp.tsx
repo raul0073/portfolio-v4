@@ -32,7 +32,7 @@ export function AboutTabs() {
 					height: "auto"
 				}}
 				loading="lazy"
-				className="inline-flex mr-4 profile-avatar dark:bg-appGray bg-appGray/40 hover:-translate-y-2 transition-transform duration-200 ease-in-out saturate-150"
+				className="inline-flex mr-4 profile-avatar dark:bg-appGray bg-appGray/40 hover:-translate-y-2 transition-transform duration-200 ease-in-out"
 			/>
 						
 						Raz Massami
