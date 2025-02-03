@@ -27,7 +27,7 @@ export default function ParallaxText() {
 	}, []);
 
 	return (
-		<section className="parallax-noah bg-gray-300 dark:bg-zinc-800">
+		<section className="parallax-noah bg-gray-300 dark:bg-zinc-800 my-24">
 			<div
 				ref={imageRef}
 				className="relative bg-cover bg-fixed h-[20vh] bg-no-repeat bg-center"

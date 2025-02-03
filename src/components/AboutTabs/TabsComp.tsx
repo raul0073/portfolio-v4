@@ -98,7 +98,7 @@ export function AboutTabs() {
 		whileInView={{filter: "blur(0px)", opacity: 1}}
 		transition={{duration: .4, ease: "easeInOut"}}
 		viewport={{once: true}}
-		className="min-h-[40rem] h-[40rem] [perspective:1000px] z-30 relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start my-40">
+		className="min-h-[40rem] h-[40rem] [perspective:1000px] z-30 relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start">
 			<Tabs tabs={tabs} />
 		</motion.div>
 	);

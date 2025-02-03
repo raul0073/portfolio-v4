@@ -67,27 +67,7 @@ function HeroContent() {
 	return (
 		<div className="hero-content -mt-6 md:mt-0">
 			<div className="flex flex-col items-start">
-				<AnimatePresence>
-						<motion.div
-							initial={{ opacity: 0, y: "-10%" }}
-							animate={{ y: 0, opacity: 1 }}
-							exit={{ y: "-10%", opacity: 0 }}
-							transition={{ duration: 0.6, ease: "easeInOut" }}
-							className="rolledImg md:hidden group absolute right-12 top-8">
-							<div className="relative overflow-hidden rotate-[40deg]">
-								<Image
-									src={images.HERO.heroMobileImg}
-									loading="lazy"
-									alt="hero_art"
-									className="heroImg pt-2 object-top scale-100  outline-none h-36 w-36 size-full -rotate-[12deg] border-slate-500/40 dark:border-stone-200/40 border object-cover rounded-full relative ease-in-out bg-white/5"
-									width={250}
-									height={250}
-								/>
-								<div className="absolute inset-0 rounded-full bg-white/5 -z-10 "></div>
-							</div>
-						</motion.div>
-					
-				</AnimatePresence>
+			
 				<motion.h1
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
