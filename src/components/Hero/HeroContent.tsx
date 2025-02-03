@@ -1,13 +1,10 @@
 "use client";
-import { images } from "@/app/assets/images/images";
 import {
-	AnimatePresence,
 	motion,
 	stagger,
 	useAnimate,
-	useScroll,
+	useScroll
 } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { MouseEvent, useEffect, useRef } from "react";
 import SplitType from "split-type";
