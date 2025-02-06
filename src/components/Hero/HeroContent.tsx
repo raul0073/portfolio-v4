@@ -56,13 +56,13 @@ function HeroContent() {
 			highlightAnimate(
 				highlightToAnimate,
 				{ transform: "translateY(0)", opacity: 1 },
-				{ duration: 0.5, delay: stagger(0.2) }
+				{ duration: 0.5, delay: stagger(0.3) }
 			);
 		}
 	}, [highlightAnimate]);
 
 	return (
-		<div className="hero-content -mt-6 md:mt-0">
+		<div className="hero-content -mt-12 md:mt-0">
 			<div className="flex flex-col items-start">
 			
 				<motion.h1
@@ -77,7 +77,7 @@ function HeroContent() {
 						animate={{ opacity: 1 }}
 						ref={highlightRef}
 						className="dark:text-appYellow text-appBlue">
-						that rarely gets paid.
+						that rarely closes tabs.
 					</motion.span>
 				</motion.h1>
 				<motion.p
@@ -85,7 +85,7 @@ function HeroContent() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 1.8 }}
 					className="mt-4 text-2xl dark:text-white/60 text-zinc-900/60">
-					Fueled by caffeine, sarcasm and the occasional Wi-Fi, I build stuff.
+					Fueled by caffeine, sarcasm and the occasional power bar, I build stuff.
 				</motion.p>
 			</div>
 			<motion.div

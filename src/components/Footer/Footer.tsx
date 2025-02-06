@@ -52,7 +52,8 @@ function FooterComp() {
 				<div className="content grid grid-cols-1 lg:grid-cols-3">
 					<div className="col-span-2" ref={scope}>
 						<h2 className="text-5xl leading-tight md:text-7xl md:leading-[5.2rem]  capitalize mb-8">
-							after everything you&apos;ve seen, let&apos;s talks business
+							{/* after everything you&apos;ve seen, let&apos;s talks business */}
+							ready to make contact? let&apos;s talk.
 						</h2>
 						<motion.div
 							initial={{ opacity: 0, y: "100%" }}
