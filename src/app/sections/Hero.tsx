@@ -11,7 +11,7 @@ function Hero() {
 						<HeroContent />
 					</div>
 				</div>
-				<div className="hidden art md:col-span-5 flex flex-col justify-center">
+				<div className="hidden art md:col-span-5  flex-col justify-center">
 					<Image
 					src={art}
 					alt="hero_art"
