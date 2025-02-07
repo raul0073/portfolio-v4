@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-
 export default function ParallaxText() {
 	const [isTopVisible, setIsTopVisible] = useState(false);
 	const imageRef = useRef<HTMLDivElement>(null);
@@ -27,7 +26,7 @@ export default function ParallaxText() {
 	}, []);
 
 	return (
-		<section className="parallax-noah bg-gray-300 dark:bg-zinc-800 my-24">
+		<section className="parallax-noah bg-gray-300 dark:bg-zinc-800 mt-24">
 			<div
 				ref={imageRef}
 				className="relative bg-cover bg-fixed h-[20vh] bg-no-repeat bg-center"

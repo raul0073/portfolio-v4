@@ -20,7 +20,7 @@ function Projects() {
 		<Fragment>
 			{isMobile ? (
 				<section
-					className="mobile-projects dark:bg-bg-dark bg-gray-300 py-24"
+					className="mobile-projects dark:bg-bg-dark bg-gray-300 pb-24"
 					id="projects">
 					<MobileProjectsGrid />
 				</section>

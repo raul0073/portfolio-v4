@@ -1,7 +1,5 @@
 "use client";
-import { images } from "@/app/assets/images/images";
 import { AnimatedList } from "@/components/Experience/AnimatedList";
-import { AnimatedExperienceLocationImageModal } from "@/components/Experience/AnimatedPopoverPicture";
 import { motion } from "framer-motion";
 
 export const EXPERIENCE_DATA = [
@@ -9,15 +7,6 @@ export const EXPERIENCE_DATA = [
 		title: "2021 - Present",
 		content: (
 			<div>
-				<span className="hidden xl:flex absolute right-0 bottom-0">
-					<AnimatedExperienceLocationImageModal
-						img={{
-							src: images.EXPERIENCE.desert,
-							name: "Somewhere in Israel",
-							text: "going north is still an issue",
-						}}
-					/>
-				</span>
 				<motion.p
 					initial={{ opacity: 0, y: "-30%" }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -71,15 +60,6 @@ export const EXPERIENCE_DATA = [
 		title: "2018 - 2020",
 		content: (
 			<div>
-				<span className="hidden xl:flex absolute right-0 bottom-0">
-					<AnimatedExperienceLocationImageModal
-						img={{
-							src: images.EXPERIENCE.zambia,
-							name: "Chililabombwe, Zambia",
-							text: "they are about to climb this mountain",
-						}}
-					/>
-				</span>
 				<motion.p
 					initial={{ opacity: 0, y: "-30%" }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -132,15 +112,6 @@ export const EXPERIENCE_DATA = [
 		title: "2015 - 2018",
 		content: (
 			<div>
-				<span className="hidden xl:flex absolute right-0 bottom-0">
-					<AnimatedExperienceLocationImageModal
-						img={{
-							src: images.EXPERIENCE.bacalar,
-							name: "Quintana Roo, Bacalar",
-							text: "no saturation needed.",
-						}}
-					/>
-				</span>
 				<motion.p
 					initial={{ opacity: 0, y: "-30%" }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -195,15 +166,6 @@ export const EXPERIENCE_DATA = [
 		title: "2012 - 2015",
 		content: (
 			<div>
-				<span className="hidden xl:flex absolute right-0 bottom-0">
-					<AnimatedExperienceLocationImageModal
-						img={{
-							src: images.EXPERIENCE.sa,
-							name: "Coffee Bay, South Africa",
-							text: "she is looking right at me!",
-						}}
-					/>
-				</span>
 				<motion.p
 					initial={{ opacity: 0, y: "-30%" }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -256,15 +218,6 @@ export const EXPERIENCE_DATA = [
 
 		content: (
 			<div className="relative">
-				<span className="hidden xl:flex absolute -top-[300%] right-0">
-					<AnimatedExperienceLocationImageModal
-						img={{
-							src: images.EXPERIENCE.malabo,
-							name: "Malabo, Equatorial Guinea",
-							text: "no, I'm not in it.",
-						}}
-					/>
-				</span>
 				<motion.p
 					initial={{ opacity: 0, y: "-30%" }}
 					whileInView={{ opacity: 1, y: 0 }}

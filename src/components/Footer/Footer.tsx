@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useEffect } from "react";
 import SplitType from "split-type";
 import ButtonComp from "../ui/ButtonComp";
+import { SOCIAL_ICONS } from "@/app/assets/icons/socialIcons/socialIcons";
+import { cn } from "@/lib/utils";
 
 function FooterComp() {
 	const [scope, animate] = useAnimate();
@@ -69,7 +71,28 @@ function FooterComp() {
 									className="lowercase border-dashed border-appBlue dark:border-appYellow2"
 								/>
 							</Link>
+							<div className="flex gap-2 mt-8">
+						{SOCIAL_ICONS.filter(ico => ico.name !== "Gmail").map((icon) => {
+						const iconName = icon.name;
+						return (
+							<Link target="_blank" href={icon.link as string}
+							key={icon.name}
+							>
+								<button
+								
+								data-umami-iconname={iconName}
+								className="group text-white  inline-flex items-center justify-center dark:bg-gradient-to-b dark:transparent dark:to-neutral-700 bg-gradient-to-b from-stone-600 to-stone-800  text-base px-6 transition duration-150 shadow-[0_10px_20px_rgba(0,_0,_0,_.1),0_3px_6px_rgba(0,_0,_0,_.05)] hover:shadow-[rgba(0,_1,_0,_.2)_0_2px_8px] active:outline-none hover:opacity-80 rounded-full w-12 h-12 ">
+								<i
+									className={cn(
+										`${icon.class} group-hover:text-appYellow2`
+									)}></i>
+							</button>
+							</Link>
+						);
+					})}
+						</div>
 						</motion.div>
+				
 					</div>
 					<nav>
 						<ul className="navigation-links flex flex-col  gap-2 mt-16">
@@ -88,7 +111,9 @@ function FooterComp() {
 							})}
 						</ul>
 					</nav>
+					
 				</div>
+				
 				<p className="py-16 dark:text-white/40 text-black/40">
 					&copy; All rights reserved to everyone.
 				</p>
