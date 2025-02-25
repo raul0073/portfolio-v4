@@ -91,12 +91,12 @@ function HeroContent() {
 				initial={{ opacity: 0, y: "100%" }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.7, delay: 2.1 }}
-				className="action w-full my-6">
-				<Link href={"#projects"} onClick={handleNavigationMove}>
+				className="action w-fit my-6 ">
+				<Link href={"#projects"} onClick={handleNavigationMove} className="">
 					<ButtonComp
 						title="my work"
 						data-umami-event="my work"
-						className="group  "
+						className="group w-fit"
 						iconAnimationDirection="down"
 						icon={
 							<svg
@@ -104,7 +104,7 @@ function HeroContent() {
 								width="25px"
 								version="1.1"
 								id="Layer_1"
-								className="fill-zinc-900/30 dark:fill-white/30 group-hover:fill-appBlue dark:group-hover:fill-appYellow2"
+								className="fill-zinc-900/30 dark:fill-white/30 group-hover:fill-appBlue dark:group-hover:fill-appYellow2 pointer-events-none"
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 512.04 512.04">
 								<g>
